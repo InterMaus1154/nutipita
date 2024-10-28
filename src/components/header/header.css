@@ -4,11 +4,11 @@ header{
 
 header ._wrapper{
     display: flex;
-    gap: .5rem;
+    gap: .75rem;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-
+    background-color: #ff0000;
     padding: 1rem;
 }
 
@@ -37,7 +37,7 @@ header nav ul{
 }
 
 header h1{
-    width: 175px;
+    width: calc(11rem);
 }
 
 header h2{
@@ -50,7 +50,7 @@ header h2{
     }
 
     header h1{
-        width: 125px;
+        width: calc(9rem);
     }
 }
 
