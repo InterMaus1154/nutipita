@@ -21,9 +21,9 @@ const Header: FC = () => {
                         </h1>
                         <h2>Artisan Pita Bread Bakery</h2>
                     </div>
-                    <FontAwesomeIcon onClick={() => {
-                        setIsMenuOpen(!isMenuOpen)
-                    }} icon={faBars} className={"fa-icon"}/>
+                    {/*<FontAwesomeIcon onClick={() => {*/}
+                    {/*    setIsMenuOpen(!isMenuOpen)*/}
+                    {/*}} icon={faBars} className={"fa-icon"}/>*/}
                 </div>
                 <nav className={isMenuOpen ? "is-visible" : ""}>
                     <ul>
