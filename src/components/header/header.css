@@ -4,7 +4,6 @@ header{
     left: 0;
     right: 0;
 
-
     background-color: #e4e4e7;
 }
 
@@ -18,6 +17,12 @@ header ._wrapper{
     padding: 1rem;
 }
 
+header .slogan-wrapper{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 header nav ul{
     display: flex;
     align-items: center;
@@ -25,6 +30,24 @@ header nav ul{
     list-style-type: none;
 }
 
+@media(max-width: 768px){
+    header ._wrapper{
+        flex-direction: column;
+    }
+
+    header nav ul{
+        flex-direction: column;
+    }
+
+    header .slogan-wrapper{
+        flex-direction: column;
+    }
+}
+
 header h1{
     width: 175px;
+}
+
+header h2{
+    text-align: center;
 }
