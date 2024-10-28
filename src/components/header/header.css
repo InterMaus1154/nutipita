@@ -9,13 +9,14 @@ header ._wrapper{
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 header .slogan-wrapper{
     display: flex;
-    gap: .75rem;
+    gap: 1rem;
     align-items: center;
+    justify-content: space-between;
 }
 
 header nav ul{
@@ -33,7 +34,6 @@ header nav ul{
     header nav ul{
         flex-direction: column;
     }
-
 }
 
 header h1{
@@ -60,6 +60,9 @@ header .fa-icon {
 }
 
 @media(max-width: 768px){
+    header ._wrapper{
+        align-items: normal;
+    }
 
     header .slogan-wrapper{
         order: 1;
