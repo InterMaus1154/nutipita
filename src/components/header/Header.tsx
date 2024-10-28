@@ -12,24 +12,24 @@ const Header: FC = () => {
                     <h1 aria-label={"Nutipita"}>
                         <img src="/icon/logo.png" alt="Logo of Nutipita bakery"/>
                     </h1>
-                    <h2>Artisan Pita Bread Bakery</h2>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+                <h2>Artisan Pita Bread Bakery</h2>
+                {/*<nav>*/}
+                {/*    <ul>*/}
+                {/*        <li>*/}
+                {/*            <a href="#">Home</a>*/}
+                {/*        </li>*/}
+                {/*        <li>*/}
+                {/*            <a href="#">About</a>*/}
+                {/*        </li>*/}
+                {/*        <li>*/}
+                {/*            <a href="#">Gallery</a>*/}
+                {/*        </li>*/}
+                {/*        <li>*/}
+                {/*            <a href="#">Contact</a>*/}
+                {/*        </li>*/}
+                {/*    </ul>*/}
+                {/*</nav>*/}
             </div>
         </header>
     );
