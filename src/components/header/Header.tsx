@@ -15,10 +15,12 @@ const Header: FC = () => {
         <header className={"full-width"}>
             <div className="_wrapper">
                 <div className={"slogan-wrapper"}>
-                    <h1 aria-label={"Nutipita"}>
-                        <img src="/icon/logo.png" alt="Logo of Nutipita bakery"/>
-                    </h1>
-                    <h2>Artisan Pita Bread Bakery</h2>
+                    <div className={"inner-slogan-wrapper"}>
+                        <h1 aria-label={"Nutipita"}>
+                            <img src="/icon/logo.png" alt="Logo of Nutipita bakery"/>
+                        </h1>
+                        <h2>Artisan Pita Bread Bakery</h2>
+                    </div>
                     <FontAwesomeIcon onClick={() => {
                         setIsMenuOpen(!isMenuOpen)
                     }} icon={faBars} className={"fa-icon"}/>

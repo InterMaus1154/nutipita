@@ -46,7 +46,7 @@ header h2{
 
 @media(max-width: 768px){
     header h2{
-        font-size: .85rem;
+        font-size: .9rem;
     }
 
     header h1{
@@ -91,4 +91,10 @@ header .fa-icon {
     nav.is-visible{
         display: block;
     }
+}
+
+.inner-slogan-wrapper{
+    display: flex;
+    align-items: center;
+    gap: .25rem;
 }
