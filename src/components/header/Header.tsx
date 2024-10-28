@@ -1,15 +1,11 @@
-import {FC, useState} from 'react';
+import {FC} from 'react';
 import "./header.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Page header
  * @constructor
  */
 const Header: FC = () => {
-
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     return (
         <header className={"full-width"}>
@@ -21,11 +17,8 @@ const Header: FC = () => {
                         </h1>
                         <h2>Artisan Pita Bread Bakery</h2>
                     </div>
-                    {/*<FontAwesomeIcon onClick={() => {*/}
-                    {/*    setIsMenuOpen(!isMenuOpen)*/}
-                    {/*}} icon={faBars} className={"fa-icon"}/>*/}
                 </div>
-                <nav className={isMenuOpen ? "is-visible" : ""}>
+                <nav>
                     <ul>
                         <li>
                             <a href="#">Home</a>
