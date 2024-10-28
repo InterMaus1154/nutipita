@@ -1,0 +1,28 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+header ._wrapper{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    padding: 1rem;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style-type: none;
+}
+
+header h1{
+    width: 175px;
+}
