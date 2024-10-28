@@ -74,6 +74,7 @@ header .fa-icon {
         order: 3;
         flex-basis: 100%;
         width: 100%;
+        display: none;
     }
 
     header nav ul{
@@ -82,5 +83,9 @@ header .fa-icon {
 
     header nav ul li a{
         text-align: center;
+    }
+
+    nav.is-visible{
+        display: block;
     }
 }

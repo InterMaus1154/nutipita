@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import {FC, useState} from 'react';
 import "./header.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,9 @@ import {faBars} from "@fortawesome/free-solid-svg-icons";
  * @constructor
  */
 const Header: FC = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
     return (
         <header className={"full-width"}>
             <div className="_wrapper">
@@ -16,9 +19,11 @@ const Header: FC = () => {
                         <img src="/icon/logo.png" alt="Logo of Nutipita bakery"/>
                     </h1>
                     <h2>Artisan Pita Bread Bakery</h2>
-                    <FontAwesomeIcon icon={faBars} className={"fa-icon"}/>
+                    <FontAwesomeIcon onClick={() => {
+                        setIsMenuOpen(!isMenuOpen)
+                    }} icon={faBars} className={"fa-icon"}/>
                 </div>
-                <nav>
+                <nav className={isMenuOpen ? "is-visible" : ""}>
                     <ul>
                         <li>
                             <a href="#">Home</a>
