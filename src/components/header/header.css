@@ -1,15 +1,10 @@
 header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
     background-color: #e4e4e7;
 }
 
 header ._wrapper{
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
@@ -39,9 +34,6 @@ header nav ul{
         flex-direction: column;
     }
 
-    header .slogan-wrapper{
-        flex-direction: column;
-    }
 }
 
 header h1{
@@ -50,4 +42,45 @@ header h1{
 
 header h2{
     text-align: center;
+}
+
+@media(max-width: 768px){
+    header h2{
+        font-size: 1.1rem;
+    }
+
+    header h1{
+        width: 125px;
+    }
+}
+
+header .fa-icon {
+    font-size: 1.75rem;
+    display: none;
+}
+
+@media(max-width: 768px){
+
+    header .slogan-wrapper{
+        order: 1;
+    }
+
+    header .fa-icon{
+        display: block;
+        order: 2;
+    }
+
+    header nav{
+        order: 3;
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    header nav ul{
+        width: 100%;
+    }
+
+    header nav ul li a{
+        text-align: center;
+    }
 }

@@ -6,11 +6,10 @@ import Footer from "./components/footer/Footer.tsx";
 const App: FC = () => {
     return (
         <div className={"app-component"}>
-            <Header />
+            <Header/>
             <main>
-
             </main>
-            <Footer />
+            <Footer/>
         </div>
     );
 };
