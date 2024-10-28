@@ -46,7 +46,7 @@ header h2{
 
 @media(max-width: 768px){
     header h2{
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     header h1{
