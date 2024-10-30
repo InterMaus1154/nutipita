@@ -1,10 +1,7 @@
 import {FC} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import {faPhone} from "@fortawesome/free-solid-svg-icons";
-import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
-import {faInstagram} from "@fortawesome/free-brands-svg-icons";
-import {faTiktok} from "@fortawesome/free-brands-svg-icons";
+import {faPhone,faEnvelope, faLocationPin} from "@fortawesome/free-solid-svg-icons";
+import {faWhatsapp, faTiktok, faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 const Contact: FC = () => {
 
@@ -47,6 +44,15 @@ const Contact: FC = () => {
                             <FontAwesomeIcon icon={faTiktok}/>
                         </a>
                         <a href="" className={"contact-info"}>@nutipita</a>
+                    </div>
+                    <div className="contact-box">
+                        <h3 className={"contact-box-header"}>Location</h3>
+                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"}>
+                            <FontAwesomeIcon icon={faLocationPin} />
+                        </a>
+                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"contact-info"}>
+                            N18 2TQ
+                        </a>
                     </div>
                 </div>
             </article>

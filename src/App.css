@@ -23,6 +23,7 @@
     --darkger-gray: #EFEFEF;
     --dark-gray: #797979;
     --txt-dark: #262626;
+    --dark-orange: #b45309;
 }
 
 body{
@@ -107,7 +108,7 @@ main{
 
 .contact-box .icon-wrapper{
     font-size: 2.75rem;
-    color: #b45309;
+    color: var(--dark-orange);
 }
 
 .contact-page .location-details iframe{

@@ -41,7 +41,7 @@ header .fa-icon {
 }
 
 header nav ul li:not(:last-of-type){
-    border-right: 3px solid #f59e0b;
+    border-right: 3px solid var(--dark-orange);
     padding-right: 1rem;
 }
 
