@@ -1,5 +1,6 @@
 import {FC} from 'react';
 import "./header.css";
+import {NavLink} from "react-router-dom";
 
 /**
  * Page header
@@ -11,26 +12,26 @@ const Header: FC = () => {
         <header className={"full-width"}>
             <div className="_wrapper">
                 <div className={"slogan-wrapper"}>
-                    <div className={"inner-slogan-wrapper"}>
-                        <h1 aria-label={"Nutipita"}>
-                            <img src="/icon/logo.png" alt="Logo of Nutipita bakery"/>
+                        <h1 aria-label={"Nutipita"} title={"Go to home page"}>
+                            <NavLink to={"/"}>
+                                <img src="/icon/logo0.png" alt="Logo of Nutipita bakery"/>
+                            </NavLink>
                         </h1>
                         <h2>Artisan Pita Bread Bakery</h2>
-                    </div>
                 </div>
                 <nav>
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <NavLink to={"/"}>Home</NavLink>
                         </li>
                         <li>
-                            <a href="#">About</a>
+                            <NavLink to={"/gallery"}>Gallery</NavLink>
                         </li>
                         <li>
-                            <a href="#">Gallery</a>
+                            <NavLink to={"/products"}>Products</NavLink>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <NavLink to={"/contact"}>Contact</NavLink>
                         </li>
                     </ul>
                 </nav>

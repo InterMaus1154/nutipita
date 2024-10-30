@@ -15,9 +15,8 @@ header ._wrapper{
 
 header .slogan-wrapper{
     display: flex;
-    gap: .5rem;
+    gap: .75rem;
     align-items: center;
-    justify-content: space-between;
 }
 
 header nav ul{
@@ -27,33 +26,8 @@ header nav ul{
     list-style-type: none;
 }
 
-@media(max-width: 768px){
-    header ._wrapper{
-        flex-direction: column;
-    }
-
-    header nav ul{
-        /*flex-direction: column;*/
-        justify-content: center;
-    }
-}
-
 header h1{
-    width: calc(11rem);
-}
-
-header h2{
-    text-align: center;
-}
-
-@media(max-width: 768px){
-    header h2{
-        font-size: 1rem;
-    }
-
-    header h1{
-        width: calc(9rem);
-    }
+    width: 9rem;
 }
 
 header .fa-icon {
@@ -61,36 +35,43 @@ header .fa-icon {
     display: none;
 }
 
+header nav ul li:not(:last-of-type){
+    border-right: 1px solid var(--txt-dark);
+    padding-right: 1rem;
+}
+
 @media(max-width: 768px){
     header ._wrapper{
         align-items: normal;
+        flex-direction: column;
     }
 
     header .slogan-wrapper{
         order: 1;
     }
 
-    header .fa-icon{
-        display: block;
-        order: 2;
-    }
-
     header nav{
         order: 3;
         flex-basis: 100%;
         width: 100%;
+        padding: .5rem;
     }
 
     header nav ul{
         width: 100%;
+        justify-content: center;
     }
 
     header nav ul li a{
         text-align: center;
     }
 
-    nav.is-visible{
-        display: block;
+    header h2{
+        font-size: 1rem;
+    }
+
+    header h1{
+        width: 9rem;
     }
 }
 

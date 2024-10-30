@@ -7,7 +7,7 @@ import {FC} from 'react';
 const Footer: FC = () => {
     return (
         <footer>
-
+            NutiPita &copy; {new Date().getFullYear()}
         </footer>
     );
 };

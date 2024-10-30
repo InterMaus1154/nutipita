@@ -33,6 +33,12 @@ body{
     margin: 0 auto;
 }
 
+.app-component{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .full-width{
     width: 100vw;
     margin: 0 calc(50% - 50vw);
@@ -51,4 +57,12 @@ img{
 a{
     color: inherit;
     text-decoration: none;
+}
+
+main{
+    flex: 1;
+}
+
+.page{
+
 }
