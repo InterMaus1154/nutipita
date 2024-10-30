@@ -17,7 +17,7 @@ const Header: FC = () => {
                                 <img src="/icon/logo1.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </h1>
-                        <h2>Artisan Pita Bread Bakery</h2>
+                        <h2>Artisan Pita Bakery</h2>
                 </div>
                 <nav>
                     <ul>
