@@ -1,5 +1,6 @@
 header{
     background-color: var(--section-gray);
+    transition: background 100ms ease-in;
     position: sticky;
     top: 0;
     left: 0;
@@ -88,5 +89,6 @@ header nav ul li:not(:last-of-type){
 
 header.float{
     background: none;
+    transition: background 250ms ease-out;
     backdrop-filter: blur(10px);
 }

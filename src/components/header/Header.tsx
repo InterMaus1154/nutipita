@@ -17,6 +17,8 @@ const Header: FC = () => {
         const observer = new IntersectionObserver(entries => {
             if(!entries[0].isIntersecting){
                 setIsFloating(true);
+            }else{
+                setIsFloating(false);
             }
         });
 
