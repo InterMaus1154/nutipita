@@ -90,8 +90,9 @@ main{
     gap: 1rem;
 }
 .contact-box{
-    background-color: var(--darkger-gray);
-    background-image: linear-gradient(to bottom left, #Efefef, var(--darkger-gray));
+    /*background-color: var(--darkger-gray);*/
+    background-color: var(--section-gray);
+    background-image: linear-gradient(to bottom left,var(--section-gray) , var(--darkger-gray));
     border-radius: 1.25rem;
     padding: 1rem;
 
