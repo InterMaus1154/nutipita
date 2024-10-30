@@ -57,7 +57,7 @@ const Contact: FC = () => {
                 </div>
             </article>
             <article className="location-details">
-                <h2 className="section-title">Location</h2>
+                <h2 className="section-title">Map</h2>
                 <div className="location-wrapper">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.762802503636!2d-0.07179262345169503!3d51.60923460325893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761e9818999969%3A0xd47e022c32f85e4a!2sLanghedge%20Industrial%20Estate%2C%20Langhedge%20Ln%2C%20London%20N18%202TQ!5e0!3m2!1shu!2suk!4v1730292277961!5m2!1shu!2suk"
