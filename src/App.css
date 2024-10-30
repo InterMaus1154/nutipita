@@ -80,12 +80,13 @@ main{
 .section-title{
     text-align: center;
     font-size: 2rem;
+    color: #f59e0b;
 }
 
 /*contact page*/
 .contact-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 1rem;
 }
 .contact-box{
@@ -97,6 +98,7 @@ main{
     align-items: center;
     flex-direction: column;
     gap: .5rem;
+
 }
 
 .contact-box .contact-box-header{
@@ -106,6 +108,7 @@ main{
 
 .contact-box .icon-wrapper{
     font-size: 2.75rem;
+    color: #f59e0b;
 }
 
 .contact-page .location-details iframe{
