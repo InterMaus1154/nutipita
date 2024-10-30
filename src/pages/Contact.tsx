@@ -50,8 +50,8 @@ const Contact: FC = () => {
                         <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"}>
                             <FontAwesomeIcon icon={faLocationPin} />
                         </a>
-                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"contact-info"}>
-                            N18 2TQ
+                        <a style={{textAlign: "center"}} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"contact-info"}>
+                            Unit ?, Langhedge Industrial Estate, Langhedge Lane, Edmonton, Tottenham, N18 2TQ
                         </a>
                     </AnimatedContactBox>
                 </div>
