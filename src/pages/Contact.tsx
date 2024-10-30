@@ -2,7 +2,7 @@ import {FC} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhone,faEnvelope, faLocationPin} from "@fortawesome/free-solid-svg-icons";
 import {faWhatsapp, faTiktok, faInstagram} from "@fortawesome/free-brands-svg-icons";
-
+import AnimatedContactBox from "../components/AnimatedContactBox.tsx";
 const Contact: FC = () => {
 
     return (
@@ -10,42 +10,42 @@ const Contact: FC = () => {
             <article className={"contact-details"}>
                 <h2 className="section-title">Contacts</h2>
                 <div className="contact-wrapper">
-                    <div className="contact-box">
+                    <AnimatedContactBox className="contact-box">
                         <h3 className="contact-box-header">Email</h3>
                         <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper">
                             <FontAwesomeIcon icon={faEnvelope}/>
                         </a>
                         <a className={"contact-info"} href="mailto:nutipita@gmail.com">nutipita@gmail.com</a>
-                    </div>
-                    <div className="contact-box">
+                    </AnimatedContactBox>
+                    <AnimatedContactBox className="contact-box">
                         <h3 className="contact-box-header">Mobile</h3>
                         <a href={"tel:+447754226325"} className="icon-wrapper">
                             <FontAwesomeIcon icon={faPhone}/>
                         </a>
                         <a href="tel:+447754226325" className="contact-info">+447754226325</a>
-                    </div>
-                    <div className="contact-box">
+                    </AnimatedContactBox>
+                    <AnimatedContactBox className="contact-box">
                         <h3 className="contact-box-header">WhatsApp</h3>
                         <a href={"https://wa.me/447754226325"} className="icon-wrapper">
                             <FontAwesomeIcon icon={faWhatsapp}/>
                         </a>
                         <a href="https://wa.me/447754226325" className="contact-info">+447754226325</a>
-                    </div>
-                    <div className="contact-box">
+                    </AnimatedContactBox>
+                    <AnimatedContactBox className="contact-box">
                         <h3 className="contact-box-header">Instagram</h3>
                         <a className="icon-wrapper">
                             <FontAwesomeIcon icon={faInstagram}/>
                         </a>
                         <a href="" className={"contact-info"}>@nutipita</a>
-                    </div>
-                    <div className="contact-box">
+                    </AnimatedContactBox>
+                    <AnimatedContactBox className="contact-box">
                         <h3 className="contact-box-header">TikTok</h3>
                         <a className="icon-wrapper">
                             <FontAwesomeIcon icon={faTiktok}/>
                         </a>
                         <a href="" className={"contact-info"}>@nutipita</a>
-                    </div>
-                    <div className="contact-box">
+                    </AnimatedContactBox>
+                    <AnimatedContactBox className="contact-box">
                         <h3 className={"contact-box-header"}>Location</h3>
                         <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"}>
                             <FontAwesomeIcon icon={faLocationPin} />
@@ -53,7 +53,7 @@ const Contact: FC = () => {
                         <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"contact-info"}>
                             N18 2TQ
                         </a>
-                    </div>
+                    </AnimatedContactBox>
                 </div>
             </article>
             <article className="location-details">

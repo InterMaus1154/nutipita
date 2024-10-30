@@ -1,5 +1,9 @@
 header{
     background-color: var(--section-gray);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header ._wrapper{
@@ -41,7 +45,7 @@ header .fa-icon {
 }
 
 header nav ul li:not(:last-of-type){
-    border-right: 3px solid var(--dark-orange);
+    border-right: 2px solid var(--txt-dark);
     padding-right: 1rem;
 }
 
@@ -80,4 +84,9 @@ header nav ul li:not(:last-of-type){
     display: flex;
     align-items: center;
     gap: 1.125rem;
+}
+
+header.float{
+    background: none;
+    backdrop-filter: blur(10px);
 }
