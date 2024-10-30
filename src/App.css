@@ -61,6 +61,12 @@ a{
 
 main{
     flex: 1;
+    padding: 2rem;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2.25rem;
 }
 
 .page{

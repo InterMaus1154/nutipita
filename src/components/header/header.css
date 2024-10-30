@@ -1,6 +1,7 @@
 header{
-    background-color: #e4e4e7;
+    /*background-color: #e4e4e7;*/
     /*background-color: var(--gray-bg);*/
+    background-color: var(--darkger-gray);
 }
 
 header ._wrapper{
