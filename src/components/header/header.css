@@ -30,6 +30,10 @@ header h1{
     width: 9rem;
 }
 
+header h2{
+    font-weight: normal;
+}
+
 header .fa-icon {
     font-size: 1.75rem;
     display: none;

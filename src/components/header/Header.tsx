@@ -14,7 +14,7 @@ const Header: FC = () => {
                 <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
                             <NavLink to={"/"}>
-                                <img src="/icon/logo0.png" alt="Logo of Nutipita bakery"/>
+                                <img src="/icon/logo1.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bread Bakery</h2>
@@ -25,10 +25,10 @@ const Header: FC = () => {
                             <NavLink to={"/"}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/gallery"}>Gallery</NavLink>
+                            <NavLink to={"/products"}>Products</NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/products"}>Products</NavLink>
+                            <NavLink to={"/gallery"}>Gallery</NavLink>
                         </li>
                         <li>
                             <NavLink to={"/contact"}>Contact</NavLink>
