@@ -27,7 +27,7 @@ header nav ul{
 }
 
 header h1{
-    width: 9rem;
+    width: 7rem;
 }
 
 header h2{
@@ -71,7 +71,7 @@ header nav ul li:not(:last-of-type){
     }
 
     header h2{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     header h1{
