@@ -23,6 +23,7 @@ header nav ul{
     align-items: center;
     gap: 1.25rem;
     list-style-type: none;
+    font-weight: bold;
 }
 
 header h1{
@@ -30,7 +31,7 @@ header h1{
 }
 
 header h2{
-    font-weight: normal;
+    /*font-weight: normal;*/
 }
 
 header .fa-icon {
