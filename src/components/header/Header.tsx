@@ -31,7 +31,7 @@ const Header: FC = () => {
                             <NavLink to={"/gallery"}>Gallery</NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/contact"}>Contact</NavLink>
+                            <NavLink to={"/contact"}>Contacts</NavLink>
                         </li>
                     </ul>
                 </nav>

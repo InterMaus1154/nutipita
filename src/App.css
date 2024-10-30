@@ -91,6 +91,7 @@ main{
 }
 .contact-box{
     background-color: var(--darkger-gray);
+    background-image: linear-gradient(to bottom left, #Efefef, var(--darkger-gray));
     border-radius: 1.25rem;
     padding: 1rem;
 

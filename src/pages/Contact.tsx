@@ -8,7 +8,7 @@ const Contact: FC = () => {
     return (
         <section className={"page contact-page"}>
             <article className={"contact-details"}>
-                <h2 className="section-title">Contact</h2>
+                <h2 className="section-title">Contacts</h2>
                 <div className="contact-wrapper">
                     <div className="contact-box">
                         <h3 className="contact-box-header">Email</h3>
