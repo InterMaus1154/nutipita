@@ -8,7 +8,9 @@ const Footer: FC = () => {
     return (
         <footer className={"full-width"}>
             <div className="_wrapper">
-                Nuti Pita &copy; {new Date().getFullYear()}
+                <span className={"copy"}>
+                    Nuti Pita &copy; {new Date().getFullYear()}
+                </span>
             </div>
         </footer>
     );
