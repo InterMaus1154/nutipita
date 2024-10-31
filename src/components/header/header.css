@@ -1,5 +1,9 @@
 header{
     background-color: var(--section-gray);
+    background-color: #27272a;
+    background-image: linear-gradient(to bottom right, #525252 1%, #27272a);
+
+    color: #fff;
     transition: background 100ms ease-in;
     position: sticky;
     top: 0;
@@ -48,6 +52,7 @@ header .fa-icon {
 
 header nav ul li:not(:last-of-type){
     border-right: 2px solid var(--txt-dark);
+    border-right: 2px solid #fff;
     padding-right: 1rem;
 }
 
