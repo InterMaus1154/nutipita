@@ -3,9 +3,10 @@ import {motion, useInView} from "framer-motion";
 
 interface Props extends HTMLAttributes<HTMLDivElement>{
     children: ReactNode;
+    className: string;
 }
 
-const AnimatedContactBox: FC<Props> = ({children}) => {
+const AnimatedBox: FC<Props> = ({children, className}) => {
 
     const ref = useRef<HTMLDivElement>(document.createElement("div"));
 
@@ -16,7 +17,7 @@ const AnimatedContactBox: FC<Props> = ({children}) => {
             ref={ref}
             initial={{opacity: 0, y: 50}}
             animate={{opacity: isInView ? 1 : 0, y: isInView ? 0 : 50}}
-            className={"contact-box"}
+            className={className}
             transition={{duration: 1.2}}
         >
             {children}
@@ -24,4 +25,4 @@ const AnimatedContactBox: FC<Props> = ({children}) => {
     );
 };
 
-export default AnimatedContactBox;
+export default AnimatedBox;
