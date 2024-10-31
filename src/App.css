@@ -107,6 +107,7 @@ main{
 .contact-box .contact-box-header{
     font-size: 1.5rem;
     text-align: center;
+    font-weight: normal;
 }
 
 .contact-box .icon-wrapper{
@@ -118,9 +119,4 @@ main{
     border: 0;
     width: 100%;
     min-height: 450px;
-}
-
-@media(max-width: 768px){
-
-
 }
