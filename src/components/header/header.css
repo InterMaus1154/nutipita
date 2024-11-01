@@ -1,7 +1,7 @@
 header{
     background-color: var(--section-gray);
     background-color: #27272a;
-    background-image: linear-gradient(to bottom, #525252, #27272a);
+    background-image: linear-gradient(to top, #18181b, #27272a);
 
     color: #fff;
     transition: background 100ms ease-in;
@@ -56,6 +56,10 @@ header nav ul li:not(:last-of-type){
     padding-right: 1rem;
 }
 
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
 @media(max-width: 768px){
     header ._wrapper{
         align-items: normal;
@@ -95,7 +99,7 @@ header nav ul li:not(:last-of-type){
 
 header.float{
     background: none;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .6);
     transition: background 250ms ease-out;
     backdrop-filter: blur(10px);
 }

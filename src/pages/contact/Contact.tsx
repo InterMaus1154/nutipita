@@ -2,7 +2,8 @@ import {FC} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhone, faEnvelope, faLocationPin} from "@fortawesome/free-solid-svg-icons";
 import {faWhatsapp, faTiktok, faInstagram} from "@fortawesome/free-brands-svg-icons";
-import AnimatedBox from "../components/AnimatedBox.tsx";
+import AnimatedBox from "../../components/AnimatedBox.tsx";
+import "./contact.css";
 
 const Contact: FC = () => {
 
@@ -14,7 +15,8 @@ const Contact: FC = () => {
                     <AnimatedBox className="contact-box">
                         <h3 className="contact-box-header">Email</h3>
                         <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper">
-                            <FontAwesomeIcon icon={faEnvelope}/>
+                            {/*<FontAwesomeIcon className={"email-icon"} icon="fa-envelope fa-solid"/>*/}
+                            <img src={"icon/email.png"} alt={"Send email"}/>
                         </a>
                         <a className={"contact-info"} href="mailto:nutipita@gmail.com">nutipita@gmail.com</a>
                     </AnimatedBox>
