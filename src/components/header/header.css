@@ -33,6 +33,7 @@ header nav ul{
     align-items: center;
     gap: 1.25rem;
     list-style-type: none;
+    font-size: 1.125rem;
 }
 
 header h1{

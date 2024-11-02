@@ -2,7 +2,7 @@
 .contact-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
-    gap: 1.5rem;
+    gap: 2.25rem;
 }
 .contact-box{
     /*background-color: var(--darkger-gray);*/
@@ -36,6 +36,10 @@
     }
 }
 
+.contact-box .contact-info{
+    /*letter-spacing: 1px;*/
+    font-size: 1.1rem;
+}
 
 .contact-page .location-details iframe{
     border: 0;
