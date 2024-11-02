@@ -17,6 +17,9 @@
     justify-content: center;
     gap: .5rem;
 
+    box-shadow: .25rem .25rem .5rem 2px #d2d2d2;
+    /*box-shadow: 0 0 12px 1px #e4e4e7;*/
+
 }
 
 .contact-box .contact-box-header{
