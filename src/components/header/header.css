@@ -118,8 +118,17 @@ header nav ul li a:hover{
 
 @media(max-width: 768px){
 
+    header ._wrapper{
+        gap: 0;
+    }
+
     nav{
+        display: grid;
         order: 2!important;
+    }
+
+    nav ul{
+        overflow: hidden;
     }
 
     .page-title.float-in{
@@ -127,19 +136,20 @@ header nav ul li a:hover{
     }
 
     nav.nav-float-out{
+        grid-template-rows: 0fr;
         animation: nav-float-out 500ms 1 forwards;
+        transition: grid-template-rows 500ms ease-out;
     }
 
-    nav.nav-hidden{
-        display: none;
-    }
 }
 
 
 @keyframes nav-float-out {
     100%{
-        transform: translateY(-50%);
+        /*transform: translateY(-50%);*/
         opacity: 0;
+        grid-template-rows: 0fr;
+        padding: 0;
     }
 }
 
