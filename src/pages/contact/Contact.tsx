@@ -1,7 +1,4 @@
 import {FC} from 'react';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPhone, faEnvelope, faLocationPin} from "@fortawesome/free-solid-svg-icons";
-import {faWhatsapp, faTiktok, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import AnimatedBox from "../../components/AnimatedBox.tsx";
 import "./contact.css";
 
@@ -13,49 +10,48 @@ const Contact: FC = () => {
                 <h2 className="section-title">Contacts</h2>
                 <div className="contact-wrapper">
                     <AnimatedBox className="contact-box">
-                        <h3 className="contact-box-header">Email</h3>
-                        <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper">
-                            {/*<FontAwesomeIcon className={"email-icon"} icon="fa-envelope fa-solid"/>*/}
-                            <img src={"icon/email.png"} alt={"Send email"}/>
-                        </a>
-                        <a className={"contact-info"} href="mailto:nutipita@gmail.com">nutipita@gmail.com</a>
-                    </AnimatedBox>
-                    <AnimatedBox className="contact-box">
                         <h3 className="contact-box-header">Mobile</h3>
                         <a href={"tel:+447754226325"} className="icon-wrapper">
-                            <FontAwesomeIcon icon={faPhone}/>
+                            <img src="icon/phoneicon.png" alt="Phone icon" aria-hidden={true}/>
                         </a>
                         <a href="tel:+447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
+                        <h3 className="contact-box-header">Email</h3>
+                        <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper email-icon">
+                            <img src={"icon/email.png"} alt={"Email icon"} aria-hidden={true}/>
+                        </a>
+                        <a className={"contact-info"} href="mailto:nutipita@gmail.com">nutipita@gmail.com</a>
+                    </AnimatedBox>
+                    <AnimatedBox className="contact-box">
                         <h3 className="contact-box-header">WhatsApp</h3>
                         <a href={"https://wa.me/447754226325"} className="icon-wrapper">
-                            <FontAwesomeIcon icon={faWhatsapp}/>
+                            <img src="icon/whatsappicon.png" alt="Whatsapp icon" aria-hidden={true}/>
                         </a>
                         <a href="https://wa.me/447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
                         <h3 className="contact-box-header">Instagram</h3>
                         <a className="icon-wrapper">
-                            <FontAwesomeIcon icon={faInstagram}/>
+                            <img src="icon/instaicon.png" alt="Instagram icon" aria-hidden={true}/>
                         </a>
                         <a href="" className={"contact-info"}>@nutipita</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
                         <h3 className="contact-box-header">TikTok</h3>
                         <a className="icon-wrapper">
-                            <FontAwesomeIcon icon={faTiktok}/>
+                            <img src="icon/tiktokicon.png" alt="Tiktok icon" aria-hidden={true}/>
                         </a>
                         <a href="" className={"contact-info"}>@nutipita</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
                         <h3 className={"contact-box-header"}>Location</h3>
-                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"}>
-                            <FontAwesomeIcon icon={faLocationPin}/>
+                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"} >
+                            <img src="icon/mapicon.png" alt="Map pin icon" aria-hidden={true}/>
                         </a>
                         <a style={{textAlign: "center"}} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
                            className={"contact-info"}>
-                            Unit ?, Langhedge Industrial Estate, Langhedge Lane, Edmonton, Tottenham, N18 2TQ
+                            Unit ? N18 2TQ
                         </a>
                     </AnimatedBox>
                 </div>
