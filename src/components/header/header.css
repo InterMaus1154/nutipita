@@ -119,7 +119,7 @@ header nav ul li a:hover{
 @media(max-width: 768px){
 
     header ._wrapper{
-        gap: 0;
+        gap: .25rem;
     }
 
     nav{
