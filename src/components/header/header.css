@@ -98,9 +98,63 @@ header nav ul li a:hover{
     gap: 1.125rem;
 }
 
-header.float{
-    background: none;
-    background-color: rgba(0, 0, 0, .6);
-    transition: background 250ms ease-out;
-    backdrop-filter: blur(10px);
+.page-title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+
 }
+
+.page-title.float-in{
+    animation: float-in 500ms 1 forwards;
+
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.page-title-hidden{
+    display: none;
+}
+
+@media(max-width: 768px){
+
+    nav{
+        order: 2!important;
+    }
+
+    .page-title.float-in{
+        order: 3;
+    }
+
+    nav.nav-float-out{
+        animation: nav-float-out 500ms 1 forwards;
+    }
+
+    nav.nav-hidden{
+        display: none;
+    }
+}
+
+
+@keyframes nav-float-out {
+    100%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+@keyframes float-in {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/*header.float{*/
+/*    background: none;*/
+/*    background-color: rgba(0, 0, 0, .6);*/
+/*    transition: background 250ms ease-out;*/
+/*    backdrop-filter: blur(10px);*/
+/*}*/

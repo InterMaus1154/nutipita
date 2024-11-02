@@ -1,6 +1,7 @@
-import {FC, useEffect, useRef, useState} from 'react';
+import {FC, useEffect, useRef, useState, useContext} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
+import {HeaderContext} from "../../context/HeaderContext.tsx";
 
 /**
  * Page header
@@ -9,27 +10,50 @@ import {NavLink} from "react-router-dom";
 const Header: FC = () => {
 
     const ref = useRef<HTMLDivElement>(document.createElement("div"));
+    const headerRef = useRef<HTMLElement>(document.createElement("header"));
+
+    const [navHidden, setNavHidden] = useState<boolean>(false);
 
     const [isFloating, setIsFloating] = useState<boolean>(false);
 
-    useEffect(()=>{
+    const {setHeaderHeight, pageTitle, pageTitleVisible, setPageTitleVisible} = useContext(HeaderContext);
+
+    useEffect(() => {
 
         const observer = new IntersectionObserver(entries => {
-            if(!entries[0].isIntersecting){
+            if (!entries[0].isIntersecting) {
                 setIsFloating(true);
-            }else{
+                setPageTitleVisible(true);
+                setTimeout(() => {
+                    setNavHidden(true);
+                }, 500);
+            } else {
                 setIsFloating(false);
+                setPageTitleVisible(false);
+                setNavHidden(false);
             }
+        }, {
+            rootMargin: "100px"
         });
 
         observer.observe(ref.current);
 
-    }, []);
+        const onResize = () => {
+            setHeaderHeight(headerRef.current.getBoundingClientRect().height);
+        };
+
+        window.addEventListener("resize", onResize);
+
+        return () => {
+            window.removeEventListener("resize", onResize);
+        };
+
+    }, [setHeaderHeight]);
 
     return (
         <>
             <div className={"header-observer"} ref={ref}></div>
-            <header className={isFloating ? "full-width float" : "full-width"}>
+            <header className={isFloating ? "full-width float" : "full-width"} ref={headerRef}>
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
@@ -39,7 +63,8 @@ const Header: FC = () => {
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
                     </div>
-                    <nav>
+                    <h2 className={pageTitleVisible ? "page-title float-in" : "page-title-hidden"}>{pageTitle}</h2>
+                    <nav className={`${pageTitleVisible ? "nav-float-out":"nav-float-in" } ${navHidden ? "nav-hidden":""}`}>
                         <ul>
                             <li>
                                 <NavLink to={"/"}>Home</NavLink>
@@ -57,6 +82,7 @@ const Header: FC = () => {
                     </nav>
                 </div>
             </header>
+
         </>
 
     );

@@ -1,13 +1,21 @@
-import {FC} from 'react';
+import {FC, useContext, useEffect} from 'react';
 import AnimatedBox from "../../components/AnimatedBox.tsx";
 import "./contact.css";
+import {HeaderContext} from "../../context/HeaderContext.tsx";
 
 const Contact: FC = () => {
+
+    const {setPageTitle} = useContext(HeaderContext);
+
+    useEffect(()=>{
+        setPageTitle("Contacts");
+    }, [setPageTitle]);
 
     return (
         <section className={"page contact-page"}>
             <article className={"contact-details"}>
-                <h2 className="section-title">Contacts</h2>
+                <h2 className="section-title"
+                >Contacts</h2>
                 <div className="contact-wrapper">
                     <AnimatedBox className="contact-box">
                         <h3 className="contact-box-header">Mobile</h3>
