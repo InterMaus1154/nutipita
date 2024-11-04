@@ -64,7 +64,7 @@ const Header: FC = () => {
                         <h2>Artisan Pita Bakery</h2>
                     </div>
                     <h2 className={pageTitleVisible ? "page-title float-in" : "page-title-hidden"}>{pageTitle}</h2>
-                    <nav className={`${pageTitleVisible ? "nav-float-out":"nav-float-in" } ${navHidden ? "nav-hidden":""}`}>
+                    <nav className={`${pageTitleVisible ? "nav-float-out":"nav-float-in" }`}>
                         <ul>
                             <li>
                                 <NavLink to={"/"}>Home</NavLink>
@@ -82,7 +82,6 @@ const Header: FC = () => {
                     </nav>
                 </div>
             </header>
-
         </>
 
     );
