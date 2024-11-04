@@ -28,6 +28,12 @@ const Header: FC = () => {
 
     }, [setHeaderHeight]);
 
+    useEffect(()=>{
+        if(headerRef.current){
+            setHeaderHeight(headerRef.current.getBoundingClientRect().height);
+        }
+    }, [setHeaderHeight]);
+
     return (
         <>
             <div className={"header-observer"} ref={ref}></div>
