@@ -20,7 +20,7 @@ interface ProviderProps{
 
 const HeaderContextProvider : FC<ProviderProps> = ({children}) =>{
 
-    const [headerHeight, setHeaderHeight] = useState<number>(0);
+    const [headerHeight, setHeaderHeight] = useState<number>(114);
     const [pageTitle, setPageTitle] = useState<string>("");
     const [pageTitleVisible, setPageTitleVisible] = useState<boolean>(false);
 
