@@ -22,7 +22,7 @@ const PageTitle: FC<Props> = ({children}) => {
                 setPageTitleVisible(false);
             }
         }, {
-            rootMargin: (-1 * headerHeight - 20) + "px"
+            rootMargin: (-1 * headerHeight - 12) + "px"
         });
 
         observer.observe(ref.current);
