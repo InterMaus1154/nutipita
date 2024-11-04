@@ -13,6 +13,8 @@ const PageTitle: FC<Props> = ({children}) => {
 
     useEffect(()=>{
 
+        if(!ref.current) return;
+
         const observer = new IntersectionObserver(entries => {
             if(!entries[0].isIntersecting){
                 setPageTitleVisible(true);
@@ -20,7 +22,7 @@ const PageTitle: FC<Props> = ({children}) => {
                 setPageTitleVisible(false);
             }
         }, {
-            rootMargin: (-1 * headerHeight - 15) + "px"
+            rootMargin: (-1 * headerHeight - 20) + "px"
         });
 
         observer.observe(ref.current);

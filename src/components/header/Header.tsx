@@ -1,4 +1,4 @@
-import {FC, useEffect, useRef, useState, useContext} from 'react';
+import {FC, useEffect, useRef, useContext} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
 import {HeaderContext} from "../../context/HeaderContext.tsx";
@@ -12,11 +12,7 @@ const Header: FC = () => {
     const ref = useRef<HTMLDivElement>(document.createElement("div"));
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
 
-    const [navHidden, setNavHidden] = useState<boolean>(false);
-
-    const [isFloating, setIsFloating] = useState<boolean>(false);
-
-    const {setHeaderHeight, pageTitle, pageTitleVisible, setPageTitleVisible, headerHeight} = useContext(HeaderContext);
+    const {setHeaderHeight, pageTitle, pageTitleVisible} = useContext(HeaderContext);
 
     useEffect(() => {
 
@@ -35,7 +31,7 @@ const Header: FC = () => {
     return (
         <>
             <div className={"header-observer"} ref={ref}></div>
-            <header className={isFloating ? "full-width float" : "full-width"} ref={headerRef}>
+            <header className={"full-width"} ref={headerRef}>
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
