@@ -133,8 +133,8 @@ header nav ul li a:hover{
     }
 
     nav.nav-float-out{
-        grid-template-rows: 0fr;
         animation: nav-float-out 500ms 1 forwards;
+        animation-delay: 1s;
         transition: grid-template-rows 500ms ease-out;
     }
 

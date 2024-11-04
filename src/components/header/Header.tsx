@@ -16,27 +16,9 @@ const Header: FC = () => {
 
     const [isFloating, setIsFloating] = useState<boolean>(false);
 
-    const {setHeaderHeight, pageTitle, pageTitleVisible, setPageTitleVisible} = useContext(HeaderContext);
+    const {setHeaderHeight, pageTitle, pageTitleVisible, setPageTitleVisible, headerHeight} = useContext(HeaderContext);
 
     useEffect(() => {
-
-        const observer = new IntersectionObserver(entries => {
-            if (!entries[0].isIntersecting) {
-                setIsFloating(true);
-                setPageTitleVisible(true);
-                setTimeout(() => {
-                    setNavHidden(true);
-                }, 500);
-            } else {
-                setIsFloating(false);
-                setPageTitleVisible(false);
-                setNavHidden(false);
-            }
-        }, {
-            rootMargin: "100px"
-        });
-
-        observer.observe(ref.current);
 
         const onResize = () => {
             setHeaderHeight(headerRef.current.getBoundingClientRect().height);
