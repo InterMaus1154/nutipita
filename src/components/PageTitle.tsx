@@ -27,6 +27,10 @@ const PageTitle: FC<Props> = ({children}) => {
 
         observer.observe(ref.current);
 
+        return () =>{
+            observer.disconnect();
+        }
+
     }, [headerHeight, setPageTitleVisible]);
 
     return (
