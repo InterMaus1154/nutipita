@@ -9,7 +9,6 @@ import {HeaderContext} from "../../context/HeaderContext.tsx";
  */
 const Header: FC = () => {
 
-    const ref = useRef<HTMLDivElement>(document.createElement("div"));
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
 
     const {setHeaderHeight, pageTitle, pageTitleVisible} = useContext(HeaderContext);
@@ -35,8 +34,6 @@ const Header: FC = () => {
     }, [setHeaderHeight]);
 
     return (
-        <>
-            <div className={"header-observer"} ref={ref}></div>
             <header className={"full-width"} ref={headerRef}>
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
@@ -66,8 +63,6 @@ const Header: FC = () => {
                     </nav>
                 </div>
             </header>
-        </>
-
     );
 };
 
