@@ -8,6 +8,7 @@
     /*background-color: var(--darkger-gray);*/
     background-color: var(--section-gray);
     background-image: linear-gradient(to bottom ,var(--section-gray) , var(--darkger-gray));
+    background-image: linear-gradient(to bottom ,#d3d3d3 10% , var(--darkger-gray) 90%);
     border-radius: 1.25rem;
     padding: 2rem;
 
