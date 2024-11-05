@@ -8,7 +8,8 @@
     /*background-color: var(--darkger-gray);*/
     background-color: var(--section-gray);
     background-image: linear-gradient(to bottom ,var(--section-gray) , var(--darkger-gray));
-    background-image: linear-gradient(to bottom ,#d3d3d3 10% , var(--darkger-gray) 90%);
+    background-image: linear-gradient(to bottom ,#18181b , #52525b);
+    color: #fff;
     border-radius: 1.25rem;
     padding: 2rem;
 
@@ -18,7 +19,7 @@
     justify-content: center;
     gap: .5rem;
 
-    box-shadow: .25rem .25rem .5rem 2px #d2d2d2;
+    /*box-shadow: .25rem .25rem .5rem 2px #d2d2d2;*/
     /*box-shadow: 0 0 12px 1px #e4e4e7;*/
 
 }
