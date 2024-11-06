@@ -10,6 +10,7 @@
     background-image: linear-gradient(to bottom ,var(--section-gray) , var(--darkger-gray));
     background-image: linear-gradient(to bottom ,#18181b , #52525b);
     background-image: linear-gradient(to bottom ,#b4b4b4 , #e5e5e5);
+    background-image: linear-gradient(to bottom ,#b4b4b4 , var(--darkger-gray));
     border-radius: 1.25rem;
     padding: 2rem;
 
@@ -34,16 +35,13 @@
 .contact-box .icon-wrapper{
     font-size: 2.75rem;
     color: var(--dark-orange);
-    width: 4rem;
+    width: 5rem;
 
-    &.email-icon{
-        width: 4.25rem;
-    }
 }
 
 .contact-box .contact-info{
     /*letter-spacing: 1px;*/
-    font-size: 1.1rem;
+    font-size: 1.125rem;
 }
 
 .contact-page .location-details iframe{
