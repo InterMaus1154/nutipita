@@ -57,7 +57,7 @@ const Contact: FC = () => {
                         <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"} >
                             <img src="icon/mapicon.png" alt="Map pin icon" aria-hidden={true}/>
                         </a>
-                        <a style={{textAlign: "center"}} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
+                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
                            className={"contact-info"}>
                             Unit ?,Langhedge IE,N182TQ
                         </a>

@@ -110,12 +110,13 @@ header nav ul li a:hover{
 .page-title{
     text-align: center;
     font-size: 2rem;
+    opacity: 0;
 }
 
 .page-title.float-in{
     animation: float-in 500ms 1 forwards;
 
-    transform: translateY(50%);
+    transform: translateY(50px);
     opacity: 0;
 }
 
@@ -166,7 +167,16 @@ header nav ul li a:hover{
 }
 
 @keyframes float-in {
-    to{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    25%{
+        opacity: 0;
+    }
+
+    100%{
         transform: translateY(0);
         opacity: 1;
     }
