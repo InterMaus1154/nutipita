@@ -22,15 +22,24 @@ header ._wrapper{
     padding: 1rem;
 }
 
+header ._wrapper > *{
+    flex: 1;
+}
+
 header .slogan-wrapper{
     display: flex;
     gap: .75rem;
     align-items: center;
 }
 
+header nav{
+    justify-self: flex-end;
+}
+
 header nav ul{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 1.25rem;
     list-style-type: none;
     font-size: 1.125rem;
