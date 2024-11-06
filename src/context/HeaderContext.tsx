@@ -1,4 +1,4 @@
-import {createContext, Dispatch, FC, SetStateAction, ReactNode, useState, useEffect} from "react";
+import {createContext, Dispatch, FC, SetStateAction, ReactNode, useState} from "react";
 
 interface ContextProps {
     headerHeight: number;
@@ -24,9 +24,6 @@ const HeaderContextProvider : FC<ProviderProps> = ({children}) =>{
     const [pageTitle, setPageTitle] = useState<string>("");
     const [pageTitleVisible, setPageTitleVisible] = useState<boolean>(false);
 
-    useEffect(()=>{
-        console.log(headerHeight);
-    }, [headerHeight]);
 
     return(
         <HeaderContext.Provider value={{headerHeight, setHeaderHeight, pageTitle, setPageTitle, pageTitleVisible, setPageTitleVisible}}>
