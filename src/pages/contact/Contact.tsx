@@ -59,7 +59,7 @@ const Contact: FC = () => {
                         </a>
                         <a style={{textAlign: "center"}} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
                            className={"contact-info"}>
-                            Unit ? N18 2TQ
+                            Unit ?,Langhedge IE,N182TQ
                         </a>
                     </AnimatedBox>
                 </div>
