@@ -27,6 +27,9 @@ const Home: FC = () => {
                     </div>
                 </div>
             </article>
+            <article className={""}>
+
+            </article>
         </section>
     );
 };
