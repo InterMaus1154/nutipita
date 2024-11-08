@@ -12,6 +12,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const ScrollToButton: FC = () => {
 
+    const {pageTitleVisible} = useContext(HeaderContext);
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -20,7 +22,7 @@ const ScrollToButton: FC = () => {
     };
 
     return (
-        <button aria-label={"Go back to top"} onClick={scrollToTop} className={"scroll-top-button"}>
+        <button aria-label={"Go back to top"} onClick={scrollToTop} className={pageTitleVisible ? "scroll-top-button" : "scroll-top-button hidden"}>
             <FontAwesomeIcon icon={faArrowUp} />
         </button>
     );
@@ -28,8 +30,6 @@ const ScrollToButton: FC = () => {
 
 
 const App: FC = () => {
-
-    const {pageTitleVisible} = useContext(HeaderContext);
 
     return (
         <div className={"app-component"}>
@@ -42,9 +42,7 @@ const App: FC = () => {
                 </Routes>
             </main>
             <Footer/>
-            {
-                pageTitleVisible && <ScrollToButton/>
-            }
+            <ScrollToButton />
         </div>
     );
 };
