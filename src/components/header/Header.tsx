@@ -10,7 +10,6 @@ import {HeaderContext} from "../../context/HeaderContext.tsx";
 const Header: FC = () => {
 
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
-
     const {setHeaderHeight, pageTitle, pageTitleVisible} = useContext(HeaderContext);
 
     useEffect(() => {

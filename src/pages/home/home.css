@@ -10,35 +10,66 @@ main:has(.home-hero) .page{
 
 article.home-hero{
     background-color: #e7e7e7;
+    background-image: url("./images/hero_temp.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     padding: 2rem;
     min-height: calc(100vh - 110px);
+    position: relative;
+    isolation: isolate;
+    color: #fff;
+}
+
+article.home-hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 27, .7);
+    z-index: -1;
 }
 
 article.home-hero ._wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     min-height: calc(100vh - 200px);
 }
 
-article.home-hero .hero-block{
-    display: flex;
-    flex-direction: column;
-}
-
-article.home-hero .hero-block .section-title{
+article.home-hero .section-title{
     font-size: 7rem;
-    text-align: left;
 }
 
 .title-block{
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+.title-block h3{
+    font-size: 1.25rem;
+}
+
+article.home-hero .hero-links{
+    display: flex;
+    gap: 1rem;
+}
+
+article.home-hero .hero-link{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: 2px solid #fff;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 @media(max-width: 768px){
-    article.home-hero ._wrapper{
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    article.home-hero .section-title{
+        font-size: 4rem;
     }
 }
