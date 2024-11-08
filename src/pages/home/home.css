@@ -8,13 +8,15 @@ main:has(.home-hero) .page{
     margin: 0;
 }
 
+.home-section{
+    padding: 2rem;
+}
 article.home-hero{
     background-color: #e7e7e7;
     background-image: url("/images/hero_temp.jpg");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    padding: 2rem;
     min-height: calc(100vh - 110px);
     position: relative;
     isolation: isolate;
@@ -66,6 +68,12 @@ article.home-hero .hero-link{
     border: 2px solid #fff;
     font-size: 1.25rem;
     text-align: center;
+}
+
+.attribute-boxes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 1rem;
 }
 
 @media(max-width: 768px){
