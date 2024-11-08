@@ -12,6 +12,10 @@
     }
 }
 
+html, body{
+    scroll-behavior: smooth;
+}
+
 :root{
     --body-width: 1440px;
 
@@ -84,3 +88,16 @@ main{
     font-size: 2rem;
 }
 
+.scroll-top-button{
+    position: fixed;
+    z-index: 999;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    background-color: #27272a;
+    border: 2px solid #52525b;
+    color: #fff;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}

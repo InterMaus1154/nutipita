@@ -34,7 +34,7 @@ const PageTitle: FC<Props> = ({children}) => {
     }, [headerHeight, setPageTitleVisible]);
 
     return (
-        <h2 ref={ref} className={"section-title"}>
+        <h2 ref={ref} className={"section-title observer-title"}>
             {children}
         </h2>
     );
