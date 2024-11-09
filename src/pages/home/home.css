@@ -71,15 +71,17 @@ article.home-hero .section-title{
 
     position: relative;
     isolation: isolate;
+
+    background-image: linear-gradient(to right, white 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
 }
 
 .home-page .link:hover{
+    background-position: left bottom;
     color: var(--txt-dark);
-    background-color: #fff;
-
 }
-
-
 
 /*attributes section*/
 
@@ -127,6 +129,8 @@ article.home-hero .section-title{
     position: relative;
     isolation: isolate;
     color: #fff;
+
+    padding: 4rem;
 }
 
 .cta-section::before{
