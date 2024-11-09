@@ -38,7 +38,7 @@ const Header: FC = () => {
                     <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
                             <NavLink to={"/"}>
-                                <img src="/icon/logo3.png" alt="Logo of Nutipita bakery"/>
+                                <img src="/icon/logo_new.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
