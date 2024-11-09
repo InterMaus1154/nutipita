@@ -7,6 +7,7 @@ import {faUsers} from "@fortawesome/free-solid-svg-icons";
 import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 import {faSeedling} from "@fortawesome/free-solid-svg-icons";
 import AnimatedBox from "../../components/AnimatedBox.tsx";
+import {NavLink} from "react-router-dom";
 
 const Home: FC = () => {
 
@@ -26,9 +27,9 @@ const Home: FC = () => {
                             At Nutipita, quality isn’t just a promise—it’s a tradition
                         </h3>
                     </div>
-                    <div className={"hero-links"}>
-                        <a href={"#"} className={"hero-link"}>Our Story</a>
-                        <a href={"#"} className={"hero-link"}>Products</a>
+                    <div className={"links"}>
+                        <a href={"#"} className={"link"}>Our Story</a>
+                        <a href={"#"} className={"link"}>Products</a>
                     </div>
                 </div>
             </article>
@@ -75,6 +76,15 @@ const Home: FC = () => {
                             always maintaining the highest quality standards.
                         </p>
                     </AnimatedBox>
+                </div>
+            </article>
+            <article className={"cta-section home-section full-width"}>
+                <div className={"_wrapper"}>
+                    <h2 className={"section-title"}>Join Us in Our Journey</h2>
+                    <h3 className="subtitle">Experience the taste of artisan pita bread with Nutipita—where quality and tradition meet in every bite.</h3>
+                    <div className="links">
+                        <NavLink to={"/contact"} className="link">Contact Us!</NavLink>
+                    </div>
                 </div>
             </article>
         </section>
