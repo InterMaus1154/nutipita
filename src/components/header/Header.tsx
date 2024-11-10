@@ -1,4 +1,4 @@
-import {FC, useRef, Fragment, useEffect, useContext} from 'react';
+import {FC, useRef, Fragment, useEffect, useContext, useState} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
 import {HeaderContext} from "../../context/HeaderContext.ts";
@@ -29,6 +29,8 @@ const Header: FC = () => {
 
     }, [setHeaderVisible]);
 
+    const [isNavVisible, setIsNavVisible] = useState<boolean>(false);
+
     return (
         <Fragment>
             <header className={!isHeaderVisible ? "full-width float" : "full-width"} ref={headerRef}>
@@ -40,11 +42,11 @@ const Header: FC = () => {
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
-                        <button className={"hamburger-button"}>
+                        <button onClick={() => {setIsNavVisible(!isNavVisible)}} className={"hamburger-button"} aria-label={"Toggle navigation menu"} title={"Toggle navigation menu"}>
                             <FontAwesomeIcon icon={faBars}/>
                         </button>
                     </div>
-                    <nav>
+                    <nav className={isNavVisible? "nav-visible" : "nav-hidden"}>
                         <ul>
                             <li>
                                 <NavLink to={"/"}>Home</NavLink>

@@ -90,7 +90,6 @@ header .slogan-wrapper .hamburger-button{
         order: 3;
         flex-basis: 100%;
         width: 100%;
-        padding: .5rem;
     }
 
     header nav ul{
@@ -104,7 +103,34 @@ header .slogan-wrapper .hamburger-button{
 
     nav{
         display: grid;
-        order: 2!important;
+    }
+
+    nav.nav-hidden{
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 250ms ease-in;
+        padding: 0;
+    }
+
+    nav.nav-visible{
+        grid-template-rows: 1fr;
+        transition: grid-template-rows 250ms ease-in;
+    }
+
+
+    nav ul{
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    nav ul li{
+        width: 100%;
+        border: 0!important;
+        padding: 0!important;
+    }
+
+    nav ul li a{
+        display: block;
+        width: 100%;
     }
 
     nav ul{
@@ -112,11 +138,13 @@ header .slogan-wrapper .hamburger-button{
     }
 
     header .slogan-wrapper .hamburger-button{
+        display: block;
         margin-left: auto;
-        font-size: 2rem;
+        font-size: 2.25rem;
         background: none;
         border: 0;
         color: #fff;
+        cursor: pointer;
     }
 }
 

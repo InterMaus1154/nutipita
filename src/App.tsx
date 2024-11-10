@@ -1,4 +1,4 @@
-import {FC, ReactNode, useLayoutEffect} from 'react';
+import {FC, ReactNode, useContext, useLayoutEffect} from 'react';
 import "./App.css";
 import Header from "./components/header/Header.tsx";
 import Footer from "./components/footer/Footer.tsx";
@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Contact from "./pages/contact/Contact.tsx";
 import {faArrowUp} from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {HeaderContext} from "./context/HeaderContext.ts";
 
 
 const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
@@ -27,6 +28,8 @@ const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
 
 const ScrollToButton: FC = () => {
 
+    const {isHeaderVisible} = useContext(HeaderContext);
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -35,7 +38,7 @@ const ScrollToButton: FC = () => {
     };
 
     return (
-        <button aria-label={"Go back to top"} onClick={scrollToTop} className={"scroll-top-button"}>
+        <button aria-label={"Go back to top"} onClick={scrollToTop} className={!isHeaderVisible ? "scroll-top-button" : "scroll-top-button hidden"}>
             <FontAwesomeIcon icon={faArrowUp}/>
         </button>
     );
