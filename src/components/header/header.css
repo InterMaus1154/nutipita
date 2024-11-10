@@ -47,6 +47,7 @@ header nav ul{
 
 header h1{
     width: 7rem;
+    transition: width 250ms ease-in;
 }
 
 header h2{
@@ -70,10 +71,15 @@ header nav ul li a:hover{
     text-decoration: underline;
 }
 
+header .slogan-wrapper .hamburger-button{
+    display: none;
+}
+
 @media(max-width: 768px){
     header ._wrapper{
         align-items: normal;
         flex-direction: column;
+        gap: .25rem;
     }
 
     header .slogan-wrapper{
@@ -96,8 +102,21 @@ header nav ul li a:hover{
         text-align: center;
     }
 
-    header h1{
-        width: 9rem;
+    nav{
+        display: grid;
+        order: 2!important;
+    }
+
+    nav ul{
+        overflow: hidden;
+    }
+
+    header .slogan-wrapper .hamburger-button{
+        margin-left: auto;
+        font-size: 2rem;
+        background: none;
+        border: 0;
+        color: #fff;
     }
 }
 
@@ -107,31 +126,15 @@ header nav ul li a:hover{
     gap: 1.125rem;
 }
 
-@media(max-width: 768px){
 
-    header{
-        height: 200px;
-    }
-
-    header ._wrapper{
-        gap: .25rem;
-    }
-
-    nav{
-        display: grid;
-        order: 2!important;
-    }
-
-    nav ul{
-        overflow: hidden;
-    }
+header.float{
+    background: none;
+    background: rgba(0, 0, 0, .6);
+    /*transition: background 250ms ease-out;*/
+    backdrop-filter: blur(10px);
 }
 
-
-
-/*header.float{*/
-/*    background: none;*/
-/*    background-color: rgba(0, 0, 0, .6);*/
-/*    transition: background 250ms ease-out;*/
-/*    backdrop-filter: blur(10px);*/
-/*}*/
+header.float h1{
+    width: 4rem;
+    transition: width 250ms ease-in;
+}

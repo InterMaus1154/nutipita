@@ -1,6 +1,9 @@
-import {FC, useRef} from 'react';
+import {FC, useRef, Fragment, useEffect, useContext} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
+import {HeaderContext} from "../../context/HeaderContext.ts";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 /**
  * Page header
@@ -9,9 +12,26 @@ import {NavLink} from "react-router-dom";
 const Header: FC = () => {
 
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
+    const observerRef = useRef<HTMLDivElement>(document.createElement("div"));
+
+    const {isHeaderVisible, setHeaderVisible} = useContext(HeaderContext);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            setHeaderVisible(entries[0].isIntersecting);
+        });
+
+        observer.observe(observerRef.current);
+
+        return () => {
+            observer.disconnect();
+        }
+
+    }, [setHeaderVisible]);
 
     return (
-            <header className={"full-width"} ref={headerRef}>
+        <Fragment>
+            <header className={!isHeaderVisible ? "full-width float" : "full-width"} ref={headerRef}>
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
@@ -20,6 +40,9 @@ const Header: FC = () => {
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
+                        <button className={"hamburger-button"}>
+                            <FontAwesomeIcon icon={faBars}/>
+                        </button>
                     </div>
                     <nav>
                         <ul>
@@ -37,8 +60,12 @@ const Header: FC = () => {
                             </li>
                         </ul>
                     </nav>
+
                 </div>
             </header>
+            <div className={"header-observer"} aria-hidden={true} ref={observerRef}></div>
+        </Fragment>
+
     );
 };
 
