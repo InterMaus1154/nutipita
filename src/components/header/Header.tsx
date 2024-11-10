@@ -1,7 +1,6 @@
-import {FC, useEffect, useRef, useContext} from 'react';
+import {FC, useRef} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
-import {HeaderContext} from "../../context/HeaderContext.tsx";
 
 /**
  * Page header
@@ -10,27 +9,6 @@ import {HeaderContext} from "../../context/HeaderContext.tsx";
 const Header: FC = () => {
 
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
-    const {setHeaderHeight, pageTitle, pageTitleVisible} = useContext(HeaderContext);
-
-    useEffect(() => {
-
-        const onResize = () => {
-            setHeaderHeight(headerRef.current.getBoundingClientRect().height);
-        };
-
-        window.addEventListener("resize", onResize);
-
-        return () => {
-            window.removeEventListener("resize", onResize);
-        };
-
-    }, [setHeaderHeight]);
-
-    useEffect(()=>{
-        if(headerRef.current){
-            setHeaderHeight(headerRef.current.getBoundingClientRect().height);
-        }
-    }, [setHeaderHeight]);
 
     return (
             <header className={"full-width"} ref={headerRef}>
@@ -43,8 +21,7 @@ const Header: FC = () => {
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
                     </div>
-                    <h2 className={pageTitleVisible ? "page-title float-in" : "page-title-hidden"}>{pageTitle}</h2>
-                    <nav className={`${pageTitleVisible ? "nav-float-out":"nav-float-in" }`}>
+                    <nav>
                         <ul>
                             <li>
                                 <NavLink to={"/"}>Home</NavLink>

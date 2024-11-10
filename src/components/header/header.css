@@ -107,28 +107,7 @@ header nav ul li a:hover{
     gap: 1.125rem;
 }
 
-.page-title{
-    text-align: center;
-    font-size: 2rem;
-    opacity: 0;
-}
-
-.page-title.float-in{
-    animation: float-in 500ms 1 forwards;
-
-    transform: translateY(50px);
-    opacity: 0;
-}
-
-.page-title-hidden{
-    display: none;
-}
-
 @media(max-width: 768px){
-
-    .page-tile.float-in{
-        animation-delay: 1s;
-    }
 
     header{
         height: 200px;
@@ -145,40 +124,6 @@ header nav ul li a:hover{
 
     nav ul{
         overflow: hidden;
-    }
-
-    .page-title.float-in{
-        order: 3;
-    }
-
-    nav.nav-float-out{
-        animation: nav-float-out 500ms 1 forwards;
-        transition: grid-template-rows 500ms ease-out;
-    }
-}
-
-@keyframes nav-float-out {
-    100%{
-        /*transform: translateY(-50%);*/
-        opacity: 0;
-        grid-template-rows: 0fr;
-        padding: 0;
-    }
-}
-
-@keyframes float-in {
-    0%{
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    25%{
-        opacity: 0;
-    }
-
-    100%{
-        transform: translateY(0);
-        opacity: 1;
     }
 }
 
