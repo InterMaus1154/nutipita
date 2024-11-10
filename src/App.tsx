@@ -15,7 +15,10 @@ const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
 
     const location = useLocation();
 
+    const {setNavVisible} = useContext(HeaderContext);
+
     useLayoutEffect(() => {
+        setNavVisible(false);
         window.scrollTo({
             top: 0,
             left: 0,

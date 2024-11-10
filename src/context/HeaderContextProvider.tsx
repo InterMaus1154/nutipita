@@ -10,9 +10,10 @@ interface IProvider {
 const HeaderContextProvider: FC<IProvider> = ({children}) => {
 
     const [isHeaderVisible, setHeaderVisible] = useState<boolean>(true);
+    const [isNavVisible, setNavVisible] = useState<boolean>(false);
 
     return (
-        <HeaderContext.Provider value={{isHeaderVisible, setHeaderVisible}}>
+        <HeaderContext.Provider value={{isHeaderVisible, setHeaderVisible, isNavVisible, setNavVisible}}>
             {children}
         </HeaderContext.Provider>
     );
