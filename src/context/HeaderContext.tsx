@@ -24,7 +24,6 @@ const HeaderContextProvider : FC<ProviderProps> = ({children}) =>{
     const [pageTitle, setPageTitle] = useState<string>("");
     const [pageTitleVisible, setPageTitleVisible] = useState<boolean>(false);
 
-
     return(
         <HeaderContext.Provider value={{headerHeight, setHeaderHeight, pageTitle, setPageTitle, pageTitleVisible, setPageTitleVisible}}>
             {children}
