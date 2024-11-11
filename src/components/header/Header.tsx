@@ -42,8 +42,13 @@ const Header: FC = () => {
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
-                        <button onClick={() => {setNavVisible(!isNavVisible)}} className={"hamburger-button"} aria-label={"Toggle navigation menu"} title={"Toggle navigation menu"}>
-                            <FontAwesomeIcon icon={faBars}/>
+                        {/*<button onClick={() => {setNavVisible(!isNavVisible)}} className={"hamburger-button"} aria-label={"Toggle navigation menu"} title={"Toggle navigation menu"}>*/}
+                        {/*    <FontAwesomeIcon icon={faBars}/>*/}
+                        {/*</button>*/}
+                        <button className={isNavVisible ? "hamburger-button hamburger-open": "hamburger-button"} aria-label={"Toggle navigation menu"} onClick={()=>{setNavVisible(!isNavVisible)}}>
+                            <span className={"hamburger-line"}></span>
+                            <span className={"hamburger-line"}></span>
+                            <span className={"hamburger-line"}></span>
                         </button>
                     </div>
                     <nav className={isNavVisible? "nav-visible" : "nav-hidden"}>
