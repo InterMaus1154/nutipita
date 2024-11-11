@@ -20,6 +20,7 @@ header ._wrapper{
     align-items: center;
     flex-wrap: nowrap;
     padding: 1rem;
+    transition: padding 250ms ease-in;
 }
 
 header ._wrapper > *{
@@ -159,6 +160,11 @@ header.float{
     background: rgba(0, 0, 0, .6);
     /*transition: background 250ms ease-out;*/
     backdrop-filter: blur(10px);
+}
+
+header.float ._wrapper{
+    padding: 0;
+    transition: padding 250ms ease-in;
 }
 
 header.float h1{
