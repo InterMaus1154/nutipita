@@ -13,8 +13,9 @@ const Header: FC = () => {
 
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
     const observerRef = useRef<HTMLDivElement>(document.createElement("div"));
+    const navRef = useRef<HTMLElement>(document.createElement("nav"));
 
-    const {isHeaderVisible, setHeaderVisible} = useContext(HeaderContext);
+    const {isHeaderVisible, setHeaderVisible, setNavVisible, isNavVisible} = useContext(HeaderContext);
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
@@ -29,7 +30,22 @@ const Header: FC = () => {
 
     }, [setHeaderVisible]);
 
-    const {isNavVisible, setNavVisible} = useContext(HeaderContext);
+    useEffect(()=>{
+
+        const handleClick = (e: MouseEvent) =>{
+            if(isNavVisible && navRef.current && !navRef.current.contains(e.target as Node)) {
+                setNavVisible(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClick);
+
+        return () =>{
+            document.removeEventListener("mousedown", handleClick);
+        }
+
+    }, [isNavVisible, setNavVisible])
+
 
     return (
         <Fragment>
@@ -37,7 +53,7 @@ const Header: FC = () => {
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
-                            <NavLink to={"/"}>
+                            <NavLink to={"/"} onClick={()=>{setNavVisible(false)}}>
                                 <img src="/icon/logo_new.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </h1>
@@ -51,19 +67,19 @@ const Header: FC = () => {
                             <span className={"hamburger-line"}></span>
                         </button>
                     </div>
-                    <nav className={isNavVisible? "nav-visible" : "nav-hidden"}>
+                    <nav className={isNavVisible? "nav-visible" : "nav-hidden"} ref={navRef}>
                         <ul>
                             <li>
-                                <NavLink to={"/"}>Home</NavLink>
+                                <NavLink onClick={()=>setNavVisible(false)} to={"/"}>Home</NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/products"}>Products</NavLink>
+                                <NavLink onClick={()=>setNavVisible(false)} to={"/products"}>Products</NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/gallery"}>Gallery</NavLink>
+                                <NavLink onClick={()=>setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/contact"}>Contacts</NavLink>
+                                <NavLink onClick={()=>setNavVisible(false)} to={"/contact"}>Contacts</NavLink>
                             </li>
                         </ul>
                     </nav>

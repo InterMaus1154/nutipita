@@ -25,7 +25,6 @@ const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
             behavior: "instant"
         });
     }, [location.pathname]);
-
     return children;
 }
 
