@@ -14,6 +14,7 @@ const Header: FC = () => {
     const headerRef = useRef<HTMLElement>(document.createElement("header"));
     const observerRef = useRef<HTMLDivElement>(document.createElement("div"));
     const navRef = useRef<HTMLElement>(document.createElement("nav"));
+    const buttonRef = useRef<HTMLButtonElement>(document.createElement("button"));
 
     const {isHeaderVisible, setHeaderVisible, setNavVisible, isNavVisible} = useContext(HeaderContext);
 
@@ -33,6 +34,9 @@ const Header: FC = () => {
     useEffect(()=>{
 
         const handleClick = (e: MouseEvent) =>{
+
+            if(buttonRef.current.contains(e.target as Node)) return;
+
             if(isNavVisible && navRef.current && !navRef.current.contains(e.target as Node)) {
                 setNavVisible(false);
             }
@@ -61,7 +65,7 @@ const Header: FC = () => {
                         {/*<button onClick={() => {setNavVisible(!isNavVisible)}} className={"hamburger-button"} aria-label={"Toggle navigation menu"} title={"Toggle navigation menu"}>*/}
                         {/*    <FontAwesomeIcon icon={faBars}/>*/}
                         {/*</button>*/}
-                        <button className={isNavVisible ? "hamburger-button hamburger-open": "hamburger-button"} aria-label={"Toggle navigation menu"} onClick={()=>{setNavVisible(!isNavVisible)}}>
+                        <button ref={buttonRef} className={isNavVisible ? "hamburger-button hamburger-open": "hamburger-button"} aria-label={"Toggle navigation menu"} onClick={()=>{setNavVisible(!isNavVisible)}}>
                             <span className={"hamburger-line"}></span>
                             <span className={"hamburger-line"}></span>
                             <span className={"hamburger-line"}></span>
