@@ -15,8 +15,7 @@ article.home-hero{
     background-color: #e7e7e7;
     background-image: url("/images/hero_temp.webp");
     background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    background-position: center;
     min-height: calc(100vh - 110px);
     position: relative;
     isolation: isolate;
@@ -123,8 +122,7 @@ article.home-hero .section-title{
     background-color: #e7e7e7;
     background-image: url("/images/hero_temp.webp");
     background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    background-position: center;
 
     position: relative;
     isolation: isolate;

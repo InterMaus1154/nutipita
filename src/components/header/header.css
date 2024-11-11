@@ -102,7 +102,6 @@ header .slogan-wrapper .hamburger-button{
     }
 
     nav{
-        will-change: auto;
         display: grid;
     }
 
@@ -165,6 +164,3 @@ header.float ._wrapper{
     transition: padding 250ms ease-in;
 }
 
-header.float h1{
-
-}
