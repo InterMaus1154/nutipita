@@ -47,7 +47,7 @@ header nav ul{
 
 header h1{
     width: 7rem;
-    transition: width 250ms ease-in;
+    transition: transform 250ms ease-in;
 }
 
 header h2{
@@ -76,6 +76,7 @@ header .slogan-wrapper .hamburger-button{
 }
 
 @media(max-width: 768px){
+
     header ._wrapper{
         align-items: normal;
         flex-direction: column;
@@ -116,7 +117,6 @@ header .slogan-wrapper .hamburger-button{
         /*transition: grid-template-rows 250ms ease-in;*/
     }
 
-
     nav ul{
         flex-direction: column;
         overflow: hidden;
@@ -154,7 +154,6 @@ header .slogan-wrapper .hamburger-button{
     gap: 1.125rem;
 }
 
-
 header.float{
     background: none;
     background: rgba(0, 0, 0, .6);
@@ -163,6 +162,6 @@ header.float{
 }
 
 header.float h1{
-    width: 4rem;
-    transition: width 250ms ease-in;
+    transform: scale(.75);
+    transition: transform 250ms ease-in;
 }
