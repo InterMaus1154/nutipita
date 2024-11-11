@@ -164,10 +164,8 @@ header.float{
 
 header.float ._wrapper{
     padding: 0;
-    transition: padding 250ms ease-in;
 }
 
 header.float h1{
-    transform: scale(.75);
-    transition: transform 250ms ease-in;
+
 }
