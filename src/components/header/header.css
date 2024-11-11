@@ -103,17 +103,17 @@ header .slogan-wrapper .hamburger-button{
 
     nav{
         display: grid;
+        will-change: auto;
     }
 
     nav.nav-hidden{
         grid-template-rows: 0fr;
-        transition: grid-template-rows 250ms ease-in;
-        padding: 0;
+        /*transition: grid-template-rows 250ms ease-in;*/
     }
 
     nav.nav-visible{
         grid-template-rows: 1fr;
-        transition: grid-template-rows 250ms ease-in;
+        /*transition: grid-template-rows 250ms ease-in;*/
     }
 
 
