@@ -17,7 +17,7 @@ header ._wrapper{
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     transition: padding 250ms ease-in;
 }
 
@@ -46,7 +46,7 @@ header nav ul{
 
 header h1{
     width: 7rem;
-    transition: transform 250ms ease-in;
+    transition: width 250ms ease-in;
 }
 
 header h2{
@@ -155,12 +155,17 @@ header .slogan-wrapper .hamburger-button{
 header.float{
     background: none;
     background: rgba(0, 0, 0, .6);
-    transition: background 250ms ease-out;
+    transition: background 250ms ease-in;
     backdrop-filter: blur(10px);
 }
 
+header.float h1{
+    width: 5rem;
+    transition: width 250ms ease-in;
+}
+
 header.float ._wrapper{
-    padding: 0;
-    transition: padding 250ms ease-in;
+    padding-block: 0;
+    transition: padding-block 250ms ease-in;
 }
 
