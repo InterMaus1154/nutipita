@@ -13,7 +13,7 @@ main:has(.home-hero) .page{
 }
 article.home-hero{
     background-color: #e7e7e7;
-    /*background-image: url("/images/hero_temp.jpg");*/
+    background-image: url("/images/hero_temp.webp");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -121,7 +121,7 @@ article.home-hero .section-title{
 /*cta section*/
 .cta-section{
     background-color: #e7e7e7;
-    /*background-image: url("/images/hero_temp.jpg");*/
+    background-image: url("/images/hero_temp.webp");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
