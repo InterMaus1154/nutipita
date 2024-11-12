@@ -169,7 +169,7 @@ header nav ul li a:hover{
     }
 
     .hamburger-button.hamburger-open .hamburger-line:first-child{
-        transform: rotate(60deg) translate(2px, 7px) scaleX(.68);
+        transform: rotate(60deg) translate(3px, 7px) scaleX(.68);
     }
 
     .hamburger-button.hamburger-open .hamburger-line:nth-child(2){
