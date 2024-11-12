@@ -42,7 +42,8 @@ article.home-hero ._wrapper{
 }
 
 article.home-hero .section-title{
-    font-size: 7rem;
+    font-size: clamp(3rem, calc(3rem + 1vw), 5rem);
+    /*font-size: 4rem;*/
 }
 
 .title-block{
@@ -158,8 +159,8 @@ article.home-hero .section-title{
     text-align: center;
 }
 
-@media(max-width: 768px){
-    article.home-hero .section-title{
-        font-size: 4rem;
-    }
-}
+/*@media(max-width: 768px){*/
+/*    article.home-hero .section-title{*/
+/*        font-size: 3rem;*/
+/*    }*/
+/*}*/
