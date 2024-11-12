@@ -2,9 +2,6 @@ import {FC, useRef, Fragment, useEffect, useContext} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
 import {HeaderContext} from "../../context/HeaderContext.ts";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
 /**
  * Page header
  * @constructor
