@@ -99,7 +99,8 @@ header nav ul li a:hover{
     }
 
     header nav ul li a{
-        text-align: center;
+        text-align: right;
+        padding-right: .5rem;
     }
 
     nav{
