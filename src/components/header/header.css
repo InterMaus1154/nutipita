@@ -160,7 +160,7 @@ header nav ul li a:hover{
         width: 85%;
         height: 2px;
         background-color: #fff;
-        transition: 0.4s;
+        transition: transform 250ms ease-in;
         border-radius: .5rem;
     }
 
