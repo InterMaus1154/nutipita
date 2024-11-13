@@ -6,11 +6,11 @@
     padding: 0;
 }
 
-@media(max-width: 768px){
-    html{
-        font-size: 14px;
-    }
-}
+/*@media(max-width: 768px){*/
+/*    html{*/
+/*        font-size: 14px;*/
+/*    }*/
+/*}*/
 
 html, body{
     scroll-behavior: smooth;

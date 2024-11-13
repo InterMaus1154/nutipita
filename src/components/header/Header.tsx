@@ -47,6 +47,19 @@ const Header: FC = () => {
 
     }, [isNavVisible, setNavVisible])
 
+    useEffect(()=>{
+        const onScroll = () =>{
+
+        }
+
+        window.addEventListener("scroll", onScroll);
+
+        return () =>{
+
+        };
+
+    }, []);
+
 
     return (
         <Fragment>
