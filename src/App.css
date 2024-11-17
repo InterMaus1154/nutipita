@@ -71,9 +71,10 @@ main{
 }
 
 .page{
+    --page-section-gap: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: var(--page-section-gap, 3rem);
     margin-top: 1rem;
 }
 
