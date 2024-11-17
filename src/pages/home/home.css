@@ -54,8 +54,7 @@ article.home-hero ._wrapper p{
 }
 
 article.home-hero .section-title{
-    font-size: clamp(3rem, calc(3rem + 1vw), 5rem);
-    /*font-size: 4rem;*/
+    font-size: 4rem;
 }
 
 .title-block{
@@ -104,7 +103,7 @@ article.home-hero .section-title{
     gap: 1rem;
 }
 
-.story-section p{
+.story-section .section-block .paragraph{
     font-size: 1.25rem;
     line-height: 1.5;
     text-align: justify;
@@ -210,5 +209,9 @@ article.home-hero .section-title{
 
     .story-section .section-block p{
         font-size: 1.25rem;
+    }
+
+    article.home-hero .section-title{
+        font-size: 3rem;
     }
 }

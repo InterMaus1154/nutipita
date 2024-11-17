@@ -30,15 +30,18 @@ const Home: FC = () => {
             <article className={"story-section home-section"}>
                 <h2 className={"section-title"}>Where Quality Meets Care</h2>
                 <div className={"section-block"}>
-                    <p>
-                        At Nutipita, quality isn’t just a promise—it’s a tradition. As a family business, we ensure that
-                        every piece of pita bread is crafted with care and attention to detail.
-                    </p>
-                    <p>
-                        From small supermarkets to large restaurant chains, we supply a wide range of businesses with
-                        our freshly baked products. Our hands-on approach allows us to maintain the highest standards,
-                        ensuring that every batch of pita meets the expectations of our valued customers.
-                    </p>
+                    <AnimatedBox className={"paragraph"}>
+                            At Nutipita, quality isn’t just a promise—it’s a tradition. As a family business, we ensure
+                            that
+                            every piece of pita bread is crafted with care and attention to detail.
+                    </AnimatedBox>
+                    <AnimatedBox className={"paragraph"}>
+                            From small supermarkets to large restaurant chains, we supply a wide range of businesses
+                            with
+                            our freshly baked products. Our hands-on approach allows us to maintain the highest
+                            standards,
+                            ensuring that every batch of pita meets the expectations of our valued customers.
+                    </AnimatedBox>
                 </div>
             </article>
             <article className={"attributes-section full-width"}>
@@ -81,11 +84,10 @@ const Home: FC = () => {
             <article className={"cta-section home-section full-width"}>
                 <div className={"_wrapper"}>
                     <h2 className={"section-title"}>We Would Be Happy to Supply You!</h2>
-                    {/*<h3 className="subtitle">Experience the taste of artisan pita bread with Nutipita—where quality and*/}
-                    {/*    tradition meet in every bite.*/}
-                    {/*</h3>*/}
                     <div className="links">
-                        <NavLink to={"/contact"} className="link">Contact Us!</NavLink>
+                        <AnimatedBox>
+                            <NavLink to={"/contact"} className="link">Contact Us!</NavLink>
+                        </AnimatedBox>
                     </div>
                 </div>
             </article>

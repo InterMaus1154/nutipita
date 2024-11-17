@@ -3,10 +3,10 @@ import {motion, useInView} from "framer-motion";
 
 interface Props extends HTMLAttributes<HTMLDivElement>{
     children: ReactNode;
-    className: string;
+    className?: string;
 }
 
-const AnimatedBox: FC<Props> = ({children, className}) => {
+const AnimatedBox: FC<Props> = ({children, className=""}) => {
 
     const ref = useRef<HTMLDivElement>(document.createElement("div"));
 
