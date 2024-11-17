@@ -91,7 +91,21 @@ header nav ul li a:hover{
         flex-basis: 100%;
         width: 100%;
         padding-bottom: .5rem;
+
+        position: relative;
     }
+
+
+    /*header nav.nav-visible::before{*/
+    /*    content: '';*/
+    /*    opacity: 1;*/
+    /*    transition: opacity 250ms ease-in;*/
+    /*    position: absolute;*/
+    /*    width: 120px;*/
+    /*    height: 120px;*/
+    /*    background-image: url("/images/nav_img.jpg");*/
+    /*    background-size: cover;*/
+    /*}*/
 
     header nav ul{
         width: 100%;

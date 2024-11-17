@@ -48,20 +48,6 @@ const Header: FC = () => {
 
     }, [isNavVisible, setNavVisible])
 
-    useEffect(() => {
-        const onScroll = () => {
-            if (isNavVisible) setNavVisible(false);
-        }
-
-        window.addEventListener("scroll", onScroll);
-
-        return () => {
-            window.removeEventListener("scroll", onScroll);
-        };
-
-    }, [isNavVisible, setNavVisible]);
-
-
     return (
         <Fragment>
             <header className={!isHeaderVisible ? "full-width float" : "full-width"} ref={headerRef}>
