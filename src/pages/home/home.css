@@ -203,4 +203,12 @@ article.home-hero .section-title{
     .home-page{
         --paragraph-width: 90%;
     }
+
+    article.home-hero ._wrapper p{
+        font-size: 1.125rem;
+    }
+
+    .story-section .section-block p{
+        font-size: 1.125rem;
+    }
 }
