@@ -18,7 +18,7 @@ main:has(.home-hero) .page{
 
 article.home-hero{
     background-color: #e7e7e7;
-    background-image: url("/images/hero_temp.webp");
+    background-image: url("/images/pita_banner.jpg");
     background-size: cover;
     background-position: center;
     min-height: calc(100vh - 110px);
@@ -33,7 +33,7 @@ article.home-hero::before{
     inset: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(24, 24, 27, .7);
+    background-color: rgba(24, 24, 27, .8);
     z-index: -1;
 }
 
@@ -161,7 +161,7 @@ article.home-hero .section-title{
 /*cta section*/
 .cta-section{
     background-color: #e7e7e7;
-    background-image: url("/images/hero_temp.webp");
+    background-image: url("/images/pita_banner.jpg");
     background-size: cover;
     background-position: center;
 
