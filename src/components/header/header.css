@@ -183,15 +183,15 @@ header nav ul li a:hover{
     }
 
     .hamburger-button.hamburger-open .hamburger-line:first-child{
-        transform: rotate(60deg) translate(3px, 7px) scaleX(.68);
+        transform: rotate(58deg) translate(2px, 7px) scaleX(.68);
     }
 
     .hamburger-button.hamburger-open .hamburger-line:nth-child(2){
-        transform: rotate(90deg) translate(-8px, 0px);
+        transform: rotate(90deg) translate(-10px, 0px);
     }
 
     .hamburger-button.hamburger-open .hamburger-line:last-child{
-        transform: rotate(-57deg) translate(12px, -2px) scaleX(.68);
+        transform: rotate(-58deg) translate(12px, -2px) scaleX(.68);
     }
 
 }
