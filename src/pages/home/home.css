@@ -212,6 +212,10 @@ article.home-hero .section-title{
     }
 
     article.home-hero .section-title{
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .cta-section .section-title{
+        font-size: 2rem;
     }
 }
