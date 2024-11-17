@@ -2,6 +2,7 @@ import {FC, useRef, Fragment, useEffect, useContext} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
 import {HeaderContext} from "../../context/HeaderContext.ts";
+
 /**
  * Page header
  * @constructor
@@ -28,38 +29,24 @@ const Header: FC = () => {
 
     }, [setHeaderVisible]);
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        const handleClick = (e: MouseEvent) =>{
+        const handleClick = (e: MouseEvent) => {
 
-            if(buttonRef.current.contains(e.target as Node)) return;
+            if (buttonRef.current.contains(e.target as Node)) return;
 
-            if(isNavVisible && navRef.current && !navRef.current.contains(e.target as Node)) {
+            if (isNavVisible && navRef.current && !navRef.current.contains(e.target as Node)) {
                 setNavVisible(false);
             }
         };
 
         document.addEventListener("mousedown", handleClick);
 
-        return () =>{
+        return () => {
             document.removeEventListener("mousedown", handleClick);
         }
 
     }, [isNavVisible, setNavVisible])
-
-    useEffect(()=>{
-        const onScroll = () =>{
-
-        }
-
-        window.addEventListener("scroll", onScroll);
-
-        return () =>{
-
-        };
-
-    }, []);
-
 
     return (
         <Fragment>
@@ -67,7 +54,9 @@ const Header: FC = () => {
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
                         <h1 aria-label={"Nutipita"} title={"Go to home page"}>
-                            <NavLink to={"/"} onClick={()=>{setNavVisible(false)}}>
+                            <NavLink to={"/"} onClick={() => {
+                                setNavVisible(false)
+                            }}>
                                 <img src="/icon/logo_new.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </h1>
@@ -75,25 +64,29 @@ const Header: FC = () => {
                         {/*<button onClick={() => {setNavVisible(!isNavVisible)}} className={"hamburger-button"} aria-label={"Toggle navigation menu"} title={"Toggle navigation menu"}>*/}
                         {/*    <FontAwesomeIcon icon={faBars}/>*/}
                         {/*</button>*/}
-                        <button ref={buttonRef} className={isNavVisible ? "hamburger-button hamburger-open": "hamburger-button"} aria-label={"Toggle navigation menu"} onClick={()=>{setNavVisible(!isNavVisible)}}>
+                        <button ref={buttonRef}
+                                className={isNavVisible ? "hamburger-button hamburger-open" : "hamburger-button"}
+                                aria-label={"Toggle navigation menu"} onClick={() => {
+                            setNavVisible(!isNavVisible)
+                        }}>
                             <span className={"hamburger-line"}></span>
                             <span className={"hamburger-line"}></span>
                             <span className={"hamburger-line"}></span>
                         </button>
                     </div>
-                    <nav className={isNavVisible? "nav-visible" : "nav-hidden"} ref={navRef}>
+                    <nav className={isNavVisible ? "nav-visible" : "nav-hidden"} ref={navRef}>
                         <ul>
                             <li>
-                                <NavLink onClick={()=>setNavVisible(false)} to={"/"}>Home</NavLink>
+                                <NavLink onClick={() => setNavVisible(false)} to={"/"}>Home</NavLink>
                             </li>
                             <li>
-                                <NavLink onClick={()=>setNavVisible(false)} to={"/products"}>Products</NavLink>
+                                <NavLink onClick={() => setNavVisible(false)} to={"/products"}>Products</NavLink>
                             </li>
                             <li>
-                                <NavLink onClick={()=>setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
+                                <NavLink onClick={() => setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
                             </li>
                             <li>
-                                <NavLink onClick={()=>setNavVisible(false)} to={"/contact"}>Contacts</NavLink>
+                                <NavLink onClick={() => setNavVisible(false)} to={"/contact"}>Contacts</NavLink>
                             </li>
                         </ul>
                     </nav>
