@@ -13,7 +13,7 @@ const AnimatedBox: FC<Props> = ({children, className=""}) => {
     const isInView = useInView(ref, {once: true});
 
     return (
-        <motion.div
+        <motion.article
             ref={ref}
             initial={{opacity: 0, y: 50}}
             animate={{opacity: isInView ? 1 : 0, y: isInView ? 0 : 50}}
@@ -21,7 +21,7 @@ const AnimatedBox: FC<Props> = ({children, className=""}) => {
             transition={{duration: 1.2}}
         >
             {children}
-        </motion.div>
+        </motion.article>
     );
 };
 
