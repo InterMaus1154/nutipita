@@ -51,7 +51,7 @@ const Contact: FC = () => {
                         </a>
                         <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
                            className={"contact-info"}>
-                            Unit 13,Langhedge IE,N182TQ
+                            Unit ?,Langhedge IE,N182TQ
                         </a>
                     </AnimatedBox>
                 </div>
