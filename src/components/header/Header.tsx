@@ -2,6 +2,7 @@ import {FC, useRef, Fragment, useEffect, useContext} from 'react';
 import "./header.css";
 import {NavLink} from "react-router-dom";
 import {HeaderContext} from "../../context/HeaderContext.ts";
+import HamburgerNavButton from "./HamburgerNavButton.tsx";
 
 /**
  * Page header
@@ -61,15 +62,7 @@ const Header: FC = () => {
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
-                        <button ref={buttonRef}
-                                className={isNavVisible ? "hamburger-button hamburger-open" : "hamburger-button"}
-                                aria-label={"Toggle navigation menu"} onClick={() => {
-                            setNavVisible(!isNavVisible)
-                        }}>
-                            <span className={"hamburger-line"}></span>
-                            <span className={"hamburger-line"}></span>
-                            <span className={"hamburger-line"}></span>
-                        </button>
+                        <HamburgerNavButton _ref={buttonRef} isNavVisible={isNavVisible} setNavVisible={setNavVisible} />
                     </div>
                     <nav className={isNavVisible ? "nav-visible" : "nav-hidden"} ref={navRef}>
                         <ul>
