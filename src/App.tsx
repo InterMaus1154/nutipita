@@ -9,6 +9,7 @@ import Contact from "./pages/contact/Contact.tsx";
 import {faArrowUp} from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {HeaderContext} from "./context/HeaderContext.ts";
+import Products from "./pages/products/Products.tsx";
 
 
 const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
@@ -58,6 +59,7 @@ const App: FC = () => {
                         <Route path={"*"} element={<NotFound/>}/>
                         <Route index path={"/"} element={<Home/>}/>
                         <Route path={"/contact"} element={<Contact/>}/>
+                        <Route path={"/products"} element={<Products />}/>
                     </Routes>
                 </Wrapper>
             </main>

@@ -61,9 +61,6 @@ const Header: FC = () => {
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
-                        {/*<button onClick={() => {setNavVisible(!isNavVisible)}} className={"hamburger-button"} aria-label={"Toggle navigation menu"} title={"Toggle navigation menu"}>*/}
-                        {/*    <FontAwesomeIcon icon={faBars}/>*/}
-                        {/*</button>*/}
                         <button ref={buttonRef}
                                 className={isNavVisible ? "hamburger-button hamburger-open" : "hamburger-button"}
                                 aria-label={"Toggle navigation menu"} onClick={() => {
@@ -81,9 +78,6 @@ const Header: FC = () => {
                             </li>
                             <li>
                                 <NavLink onClick={() => setNavVisible(false)} to={"/products"}>Products</NavLink>
-                            </li>
-                            <li>
-                                <NavLink onClick={() => setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
                             </li>
                             <li>
                                 <NavLink onClick={() => setNavVisible(false)} to={"/contact"}>Contacts</NavLink>
