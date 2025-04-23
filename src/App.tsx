@@ -24,7 +24,7 @@ const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
             left: 0,
             behavior: "instant"
         });
-    }, [location.pathname]);
+    }, [location.pathname, setNavVisible]);
     return children;
 }
 
@@ -40,7 +40,7 @@ const ScrollToButton: FC = () => {
     };
 
     return (
-        <button aria-label={"Go back to top"} onClick={scrollToTop} className={!isHeaderVisible ? "scroll-top-button" : "scroll-top-button hidden"}>
+        <button aria-label={"Go back to top"} title={"Go back to top"} onClick={scrollToTop} className={!isHeaderVisible ? "scroll-top-button" : "scroll-top-button hidden"}>
             <FontAwesomeIcon icon={faArrowUp}/>
         </button>
     );
