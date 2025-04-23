@@ -1,0 +1,41 @@
+[
+  {
+    "title": "White Pita Bread",
+    "subtitle": "100g",
+    "ingredients": [
+      "flour",
+      "water",
+      "salt",
+      "yeast"
+    ],
+    "packaging": {
+      "pieces": 5
+    }
+  },
+  {
+    "title": "White Pita Bread (medium)",
+    "subtitle": "60g",
+    "ingredients": [
+      "flour",
+      "water",
+      "salt",
+      "yeast"
+    ],
+    "packaging": {
+      "pieces": 15
+    }
+  },
+  {
+    "title": "White Pita Bread (mini)",
+    "subtitle": "40g",
+    "ingredients": [
+      "flour",
+      "water",
+      "salt",
+      "yeast"
+    ],
+    "packaging": {
+      "pieces": 20
+    }
+  }
+]
