@@ -10,6 +10,10 @@
     ],
     "packaging": {
       "pieces": 5
+    },
+    "image": {
+      "folder": "images/products/white_normal/",
+      "images": ["image_1.svg", "image_2.svg", "image_3.svg"]
     }
   },
   {
@@ -23,6 +27,10 @@
     ],
     "packaging": {
       "pieces": 15
+    },
+    "image": {
+      "folder": "images/products/white_medium/",
+      "images": ["image_1.svg", "image_2.svg", "image_3.svg"]
     }
   },
   {
@@ -36,6 +44,10 @@
     ],
     "packaging": {
       "pieces": 20
+    },
+    "image": {
+      "folder": "images/products/white_mini/",
+      "images": ["image_1.svg", "image_2.svg", "image_3.svg"]
     }
   }
 ]

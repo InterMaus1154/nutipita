@@ -1,17 +1,8 @@
 import {FC} from 'react';
 import './products.css';
-import products from '../../assets/products.json';
+import products from "../../assets/products.json";
 import ProductBox from "../../components/products/ProductBox.tsx";
-
-export interface ProductDetails {
-    title: string;
-    subtitle: string;
-    ingredients: string[];
-    packaging: {
-        pieces: number;
-    };
-}
-
+import ProductDetails from "../../components/products/ProductDetails.ts";
 
 const Products: FC = () => {
     return (
@@ -19,8 +10,8 @@ const Products: FC = () => {
             <h2 className="section-title">Products</h2>
             <div className="product-list">
                 {
-                    products.map(product => {
-                        return <ProductBox productData={product}/>
+                    products.map((product) => {
+                        return <ProductBox productData={product as ProductDetails}/>
                     })
                 }
             </div>
