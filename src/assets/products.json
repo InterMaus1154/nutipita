@@ -13,7 +13,7 @@
     },
     "image": {
       "folder": "images/products/white_normal/",
-      "images": ["image_1.svg", "image_2.svg", "image_3.svg"]
+      "images": ["pita_banner.webp","image_1.svg", "image_2.svg", "image_3.svg"]
     }
   },
   {
