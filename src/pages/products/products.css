@@ -5,8 +5,39 @@
 }
 
 .product-box{
+    --product-box-radius: .25rem;
+
     flex: 1 1 clamp(250px, 30%, 33%);
 
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+
+    border: 1px solid var(--dark-gray);
+    border-radius: var(--product-box-radius, .25rem);
+}
+
+.product-box .product-box-header{
+    position: relative;
+}
+
+.product-box .product-box-header .image-selector-button{
+    position: absolute;
+    top: 50%;
+}
+
+.product-box .product-box-header .image-selector-button.left{
+    left: 0;
+}
+.product-box .product-box-header .image-selector-button.right{
+    right: 0;
+}
+
+.product-box .product-box-header img{
+    border-top-left-radius: var(--product-box-radius, .25rem);
+    border-top-right-radius: var(--product-box-radius, .25rem);
+}
+
+.product-box .product-box-body{
+    padding: 1rem;
 }
