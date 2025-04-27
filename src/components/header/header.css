@@ -215,7 +215,7 @@ header.float h1{
 }
 
 header.float ._wrapper{
-    padding-block: 0;
+    padding-block: .5rem;
     transition: padding-block 250ms ease-in;
 }
 

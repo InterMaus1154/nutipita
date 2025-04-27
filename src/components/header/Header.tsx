@@ -57,7 +57,7 @@ const Header: FC = () => {
                             <NavLink to={"/"} onClick={() => {
                                 setNavVisible(false)
                             }}>
-                                <img src="/icon/logo_new.png" alt="Logo of Nutipita bakery"/>
+                                <img src="/icon/logo_high_res_actual.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
@@ -90,7 +90,6 @@ const Header: FC = () => {
                             </li>
                         </ul>
                     </nav>
-
                 </div>
             </header>
             <div className={"header-observer"} aria-hidden={true} ref={observerRef}></div>
