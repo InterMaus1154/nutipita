@@ -26,7 +26,7 @@ const ProductBox: FC<Props> = ({productData}) => {
     return (
         <div className={"product-box"}>
             <div className="product-box-header">
-                <img src={productData.image.folder + currentImage} alt=""/>
+                <img className={"product-image"} key={currentImage} src={productData.image.folder + currentImage} alt=""/>
                 <button className={"image-selector-button left"} onClick={leftClickHandler}>&larr;</button>
                 <button className={"image-selector-button right"} onClick={rightClickHandler}>&rarr;</button>
             </div>
