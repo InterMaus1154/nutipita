@@ -11,24 +11,37 @@ const ProductBox: FC<Props> = ({productData}) => {
     const [index, setIndex] = useState<number>(0);
     const [currentImage, setCurrentImage] = useState<string>(images[index]);
 
-    const rightClickHandler = () =>{
+    const rightClickHandler = () => {
         setIndex(prevState => (prevState + 1) % images.length);
     };
 
-    const leftClickHandler = () =>{
+    const leftClickHandler = () => {
         setIndex(prevState => (prevState - 1 + images.length) % images.length);
     };
 
     useEffect(() => {
+
         setCurrentImage(images[index]);
-    }, [index, images, setCurrentImage]);
+
+        const preLoadImage = (src: string) => {
+            const img = new Image();
+            img.src = src;
+        };
+        const imagePath = productData.image.folder;
+        preLoadImage(imagePath + images[(index + 1) % images.length]);
+        preLoadImage(imagePath + images[(index - 1 + images.length) % images.length]);
+
+    }, [index, images, setCurrentImage, productData.image.folder]);
 
     return (
         <div className={"product-box"}>
             <div className="product-box-header">
-                <img className={"product-image"} key={currentImage} src={productData.image.folder + currentImage} alt=""/>
-                <button className={"image-selector-button left"} onClick={leftClickHandler}>&larr;</button>
-                <button className={"image-selector-button right"} onClick={rightClickHandler}>&rarr;</button>
+                <img className={"product-image"} key={currentImage} src={productData.image.folder + currentImage}
+                     alt=""/>
+                <button className={"image-selector-button left"} onClick={leftClickHandler}
+                        aria-label={"Go left image"}>&lt;</button>
+                <button className={"image-selector-button right"} onClick={rightClickHandler}
+                        aria-label={"Go right image"}>&gt;</button>
             </div>
             <div className="product-box-body">
                 <h3>{productData.title}</h3>
