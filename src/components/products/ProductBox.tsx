@@ -1,4 +1,4 @@
-import {FC, useEffect, useState} from 'react';
+import {FC, useEffect, useRef, useState} from 'react';
 import ProductDetails from "./ProductDetails.ts";
 
 interface Props {
@@ -10,6 +10,8 @@ const ProductBox: FC<Props> = ({productData}) => {
     const [images] = useState<string[]>(productData.image.images);
     const [index, setIndex] = useState<number>(0);
     const [currentImage, setCurrentImage] = useState<string>(images[index]);
+
+    const preLoadedImagesRef = useRef<Set<string>>(new Set());
 
     const rightClickHandler = () => {
         setIndex(prevState => (prevState + 1) % images.length);
@@ -24,8 +26,10 @@ const ProductBox: FC<Props> = ({productData}) => {
         setCurrentImage(images[index]);
 
         const preLoadImage = (src: string) => {
+            if (preLoadedImagesRef.current.has(src)) return;
             const img = new Image();
             img.src = src;
+            preLoadedImagesRef.current.add(src);
         };
         const imagePath = productData.image.folder;
         preLoadImage(imagePath + images[(index + 1) % images.length]);
