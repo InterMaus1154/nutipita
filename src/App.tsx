@@ -1,15 +1,18 @@
-import {FC, ReactNode, useContext, useLayoutEffect} from 'react';
+import {FC, lazy, ReactNode, Suspense, useContext, useLayoutEffect, startTransition} from 'react';
 import "./App.css";
 import Header from "./components/header/Header.tsx";
 import Footer from "./components/footer/Footer.tsx";
 import {Routes, Route, useLocation} from "react-router-dom";
-import Home from "./pages/home/Home.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Contact from "./pages/contact/Contact.tsx";
 import {faArrowUp} from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {HeaderContext} from "./context/HeaderContext.ts";
-import Products from "./pages/products/Products.tsx";
+import Spinner from "./components/spinner/Spinner.tsx";
+
+
+const Home = lazy(() => import("./pages/home/Home.tsx"));
+const Contact = lazy(() => import("./pages/contact/Contact.tsx"));
+const Products = lazy(() => import("./pages/products/Products.tsx"));
+const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 
 const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
@@ -19,11 +22,13 @@ const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
     const {setNavVisible} = useContext(HeaderContext);
 
     useLayoutEffect(() => {
-        setNavVisible(false);
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "instant"
+        startTransition(() => {
+            setNavVisible(false);
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "instant"
+            });
         });
     }, [location.pathname, setNavVisible]);
     return children;
@@ -41,7 +46,8 @@ const ScrollToButton: FC = () => {
     };
 
     return (
-        <button aria-label={"Go back to top"} title={"Go back to top"} onClick={scrollToTop} className={!isHeaderVisible ? "scroll-top-button" : "scroll-top-button hidden"}>
+        <button aria-label={"Go back to top"} title={"Go back to top"} onClick={scrollToTop}
+                className={!isHeaderVisible ? "scroll-top-button" : "scroll-top-button hidden"}>
             <FontAwesomeIcon icon={faArrowUp}/>
         </button>
     );
@@ -55,12 +61,14 @@ const App: FC = () => {
             <Header/>
             <main>
                 <Wrapper>
-                    <Routes>
-                        <Route path={"*"} element={<NotFound/>}/>
-                        <Route index path={"/"} element={<Home/>}/>
-                        <Route path={"/contact"} element={<Contact/>}/>
-                        <Route path={"/products"} element={<Products />}/>
-                    </Routes>
+                    <Suspense fallback={<Spinner/>}>
+                        <Routes>
+                            <Route path={"*"} element={<NotFound/>}/>
+                            <Route index path={"/"} element={<Home/>}/>
+                            <Route path={"/contact"} element={<Contact/>}/>
+                            <Route path={"/products"} element={<Products/>}/>
+                        </Routes>
+                    </Suspense>
                 </Wrapper>
             </main>
             <Footer/>
