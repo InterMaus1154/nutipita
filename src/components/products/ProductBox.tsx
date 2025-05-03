@@ -1,5 +1,6 @@
 import {FC, useEffect, useRef, useState} from 'react';
 import ProductDetails from "./ProductDetails.ts";
+import {Link} from "react-router-dom";
 
 interface Props {
     productData: ProductDetails;
@@ -48,8 +49,14 @@ const ProductBox: FC<Props> = ({productData}) => {
                         aria-label={"Go right image"}>&gt;</button>
             </div>
             <div className="product-box-body">
-                <h3>{productData.title}</h3>
-                <h4>{productData.subtitle}</h4>
+                <div className="product-box-body-header">
+                    <h3 className={"product-title"}>{productData.title}</h3>
+                    <h4 className={"product-subtitle"}>{productData.subtitle}</h4>
+                </div>
+                <div className="product-packaging">
+                    {productData.packaging.pieces}
+                </div>
+                <p className={"product-cta"}>Please <Link to={'/contact'}>contact us</Link> for pricing!</p>
             </div>
         </div>
     );
