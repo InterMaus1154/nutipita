@@ -70,18 +70,21 @@
 
     display: flex;
     flex-direction: column;
-    gap:1rem;
-}
-
-.product-box .product-box-body-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
 .product-box .product-title{
     font-size: 1.5rem;
     text-align: center;
+}
+
+.product-box .product-box-body-subheader{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .product-box .product-subtitle{
@@ -100,4 +103,18 @@
             text-decoration: none;
         }
     }
+}
+
+.product-box .product-ingredients{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.product-box .product-ingredients> p{
+    font-weight: bold;
+}
+
+.product-box .product-ingredients .ingredient-list{
+    display: flex;
+    gap: .5rem;
 }

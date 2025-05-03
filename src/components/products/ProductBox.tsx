@@ -51,10 +51,16 @@ const ProductBox: FC<Props> = ({productData}) => {
             <div className="product-box-body">
                 <div className="product-box-body-header">
                     <h3 className={"product-title"}>{productData.title}</h3>
-                    <h4 className={"product-subtitle"}>{productData.subtitle}</h4>
                 </div>
-                <div className="product-packaging">
-                    {productData.packaging.pieces}
+                <div className="product-box-body-subheader">
+                    <h4 className={"product-subtitle"}>Weight: {productData.subtitle}</h4>
+                    <p className="product-packaging">{productData.packaging.pieces} pieces/bag</p>
+                </div>
+                <div className="product-ingredients">
+                    <p>Ingredients:</p>
+                    <div className="ingredient-list">
+                        {productData.ingredients.map(ingredient => <p>{ingredient}</p>)}
+                    </div>
                 </div>
                 <p className={"product-cta"}>Please <Link to={'/contact'}>contact us</Link> for pricing!</p>
             </div>
