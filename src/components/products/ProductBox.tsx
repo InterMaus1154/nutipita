@@ -8,6 +8,9 @@ interface Props {
 
 const ProductBox: FC<Props> = ({productData}) => {
 
+    // TODO
+    // const _images = import.meta.glob('/public/'+productData.image.folder);
+
     const [images] = useState<string[]>(productData.image.images);
     const [index, setIndex] = useState<number>(0);
     const [currentImage, setCurrentImage] = useState<string>(images[index]);
@@ -53,7 +56,7 @@ const ProductBox: FC<Props> = ({productData}) => {
                     <h3 className={"product-title"}>{productData.title}</h3>
                 </div>
                 <div className="product-box-body-subheader">
-                    <h4 className={"product-subtitle"}>Weight: {productData.subtitle}</h4>
+                    <h4 className={"product-subtitle"}>{productData.subtitle}</h4>
                     <p className="product-packaging">{productData.packaging.pieces} pieces/bag</p>
                 </div>
                 <div className="product-ingredients">

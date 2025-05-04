@@ -3,7 +3,7 @@ import "./spinner.css";
 const Spinner = () => {
     return (
         <div className={"loading-spinner"}>
-            <ClipLoader size={50} color={"#000000"}/>
+            <ClipLoader size={100} color={"#000000"}/>
         </div>
     );
 };

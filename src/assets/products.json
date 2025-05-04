@@ -1,7 +1,7 @@
 [
   {
     "title": "White Pita Bread (normal)",
-    "subtitle": "100g",
+    "subtitle": "Weight: 100g",
     "ingredients": [
       "flour",
       "water",
@@ -13,12 +13,12 @@
     },
     "image": {
       "folder": "images/products/white_normal/",
-      "images": ["pita_banner.webp","image_1.svg", "image_2.svg", "image_3.svg"]
+      "images": ["soon.jpg","image_1.svg"]
     }
   },
   {
     "title": "White Pita Bread (medium)",
-    "subtitle": "60g",
+    "subtitle": "Weight: 60g",
     "ingredients": [
       "flour",
       "water",
@@ -30,12 +30,12 @@
     },
     "image": {
       "folder": "images/products/white_medium/",
-      "images": ["image_1.svg", "image_2.svg", "image_3.svg"]
+      "images": ["soon.jpg"]
     }
   },
   {
     "title": "White Pita Bread (mini)",
-    "subtitle": "40g",
+    "subtitle": "Weight: 40g",
     "ingredients": [
       "flour",
       "water",
@@ -47,7 +47,7 @@
     },
     "image": {
       "folder": "images/products/white_mini/",
-      "images": ["image_1.svg", "image_2.svg", "image_3.svg"]
+      "images": ["soon.jpg"]
     }
   }
 ]
