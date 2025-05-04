@@ -1,7 +1,8 @@
-import {FC, useEffect, useRef, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import ProductDetails from "./ProductDetails.ts";
 import {Link} from "react-router-dom";
 import fetchImages from "./FetchImages.ts";
+import preLoadImage from "./ImagePreloader.ts";
 
 interface Props {
     productData: ProductDetails;
@@ -9,6 +10,7 @@ interface Props {
 
 const ProductBox: FC<Props> = ({productData}) => {
 
+    // product images
     const [images, setImages] = useState<string[]>([]);
 
     useEffect(() => {
@@ -16,15 +18,18 @@ const ProductBox: FC<Props> = ({productData}) => {
         fetchImages(productData.image.folder, setImages);
     }, [productData]);
 
+    // index tracker for selected image
     const [index, setIndex] = useState<number>(0);
+
+    // currently visible image
     const [currentImage, setCurrentImage] = useState<string>(images[index]);
 
-    const preLoadedImagesRef = useRef<Set<string>>(new Set());
-
+    // show next image
     const rightClickHandler = () => {
         setIndex(prevState => (prevState + 1) % images.length);
     };
 
+    // show previous image
     const leftClickHandler = () => {
         setIndex(prevState => (prevState - 1 + images.length) % images.length);
     };
@@ -33,16 +38,11 @@ const ProductBox: FC<Props> = ({productData}) => {
 
         setCurrentImage(images[index]);
 
-        const preLoadImage = (src: string) => {
-            if (preLoadedImagesRef.current.has(src)) return;
-            const img = new Image();
-            img.src = src;
-            preLoadedImagesRef.current.add(src);
-        };
+        // preload previous and next image
         preLoadImage(images[(index + 1) % images.length]);
         preLoadImage(images[(index - 1 + images.length) % images.length]);
 
-    }, [index, images, setCurrentImage, productData.image.folder]);
+    }, [index, images, setCurrentImage]);
 
     return (
         <div className={"product-box"}>
