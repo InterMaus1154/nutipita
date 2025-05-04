@@ -8,12 +8,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {HeaderContext} from "./context/HeaderContext.ts";
 import Spinner from "./components/spinner/Spinner.tsx";
 
-
 const Home = lazy(() => import("./pages/home/Home.tsx"));
 const Contact = lazy(() => import("./pages/contact/Contact.tsx"));
 const Products = lazy(() => import("./pages/products/Products.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
-
 
 const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
 
@@ -60,16 +58,16 @@ const App: FC = () => {
         <div className={"app-component"}>
             <Header/>
             <main>
-                <Wrapper>
-                    <Suspense fallback={<Spinner/>}>
+                <Suspense fallback={<Spinner/>}>
+                    <Wrapper>
                         <Routes>
                             <Route path={"*"} element={<NotFound/>}/>
                             <Route index path={"/"} element={<Home/>}/>
                             <Route path={"/contact"} element={<Contact/>}/>
                             <Route path={"/products"} element={<Products/>}/>
                         </Routes>
-                    </Suspense>
-                </Wrapper>
+                    </Wrapper>
+                </Suspense>
             </main>
             <Footer/>
             <ScrollToButton/>
