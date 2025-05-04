@@ -67,7 +67,7 @@ const ProductBox: FC<Props> = ({productData}) => {
                 <div className="product-ingredients">
                     <p>Ingredients:</p>
                     <div className="ingredient-list">
-                        {productData.ingredients.map(ingredient => <p>{ingredient}</p>)}
+                        {productData.ingredients.join(', ')}
                     </div>
                 </div>
                 <p className={"product-cta"}>Please <Link to={'/contact'}>contact us</Link> for pricing!</p>
