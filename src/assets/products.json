@@ -12,8 +12,7 @@
       "pieces": 5
     },
     "image": {
-      "folder": "images/products/white_normal/",
-      "images": ["soon.jpg","image_1.svg"]
+      "folder": "white_normal"
     }
   },
   {
@@ -29,8 +28,7 @@
       "pieces": 15
     },
     "image": {
-      "folder": "images/products/white_medium/",
-      "images": ["soon.jpg"]
+      "folder": "white_medium"
     }
   },
   {
@@ -46,8 +44,7 @@
       "pieces": 20
     },
     "image": {
-      "folder": "images/products/white_mini/",
-      "images": ["soon.jpg"]
+      "folder": "white_mini"
     }
   }
 ]

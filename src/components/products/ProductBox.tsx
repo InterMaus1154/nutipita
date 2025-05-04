@@ -8,10 +8,40 @@ interface Props {
 
 const ProductBox: FC<Props> = ({productData}) => {
 
-    // TODO
-    // const _images = import.meta.glob('/public/'+productData.image.folder);
+    const [images, setImages] = useState<string[]>([]);
 
-    const [images] = useState<string[]>(productData.image.images);
+    useEffect(() => {
+
+        const loadImages = async () =>{
+            let images = {} as Record<string, () => Promise<{ default: string }>>;
+            switch (productData.image.folder) {
+                case "white_normal":
+                    images = import.meta.glob('/src/images/products/white_normal/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
+                    break;
+                case "white_mini":
+                    images = import.meta.glob('/src/images/products/white_mini/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
+                    break;
+                case "white_medium":
+                    images = import.meta.glob('/src/images/products/white_medium/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
+                    break;
+                default:
+                    images = {};
+            }
+
+            const loadedImages = await Promise.all(
+                Object.values(images).map((importFn) => importFn().then(mod => mod.default))
+            );
+            setImages(loadedImages);
+        };
+        loadImages();
+
+    }, [productData]);
+
+    useEffect(() => {
+        console.log(images);
+    }, [images]);
+
+
     const [index, setIndex] = useState<number>(0);
     const [currentImage, setCurrentImage] = useState<string>(images[index]);
 
@@ -35,16 +65,15 @@ const ProductBox: FC<Props> = ({productData}) => {
             img.src = src;
             preLoadedImagesRef.current.add(src);
         };
-        const imagePath = productData.image.folder;
-        preLoadImage(imagePath + images[(index + 1) % images.length]);
-        preLoadImage(imagePath + images[(index - 1 + images.length) % images.length]);
+        preLoadImage(images[(index + 1) % images.length]);
+        preLoadImage(images[(index - 1 + images.length) % images.length]);
 
     }, [index, images, setCurrentImage, productData.image.folder]);
 
     return (
         <div className={"product-box"}>
             <div className="product-box-header">
-                <img className={"product-image"} key={currentImage} src={productData.image.folder + currentImage}
+                <img className={"product-image"} key={currentImage} src={currentImage}
                      alt=""/>
                 <button className={"image-selector-button left"} onClick={leftClickHandler}
                         aria-label={"Go left image"}>&lt;</button>

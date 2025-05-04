@@ -7,6 +7,5 @@ export default interface ProductDetails {
     };
     image: {
         folder: string;
-        images: string[];
     };
 }
