@@ -1,6 +1,7 @@
 import {FC, useEffect, useRef, useState} from 'react';
 import ProductDetails from "./ProductDetails.ts";
 import {Link} from "react-router-dom";
+import fetchImages from "./FetchImages.ts";
 
 interface Props {
     productData: ProductDetails;
@@ -11,36 +12,9 @@ const ProductBox: FC<Props> = ({productData}) => {
     const [images, setImages] = useState<string[]>([]);
 
     useEffect(() => {
-
-        const loadImages = async () =>{
-            let images = {} as Record<string, () => Promise<{ default: string }>>;
-            switch (productData.image.folder) {
-                case "white_normal":
-                    images = import.meta.glob('/src/images/products/white_normal/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
-                    break;
-                case "white_mini":
-                    images = import.meta.glob('/src/images/products/white_mini/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
-                    break;
-                case "white_medium":
-                    images = import.meta.glob('/src/images/products/white_medium/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
-                    break;
-                default:
-                    images = {};
-            }
-
-            const loadedImages = await Promise.all(
-                Object.values(images).map((importFn) => importFn().then(mod => mod.default))
-            );
-            setImages(loadedImages);
-        };
-        loadImages();
-
+        // fetch images dynamically and set to current product images
+        fetchImages(productData.image.folder, setImages);
     }, [productData]);
-
-    useEffect(() => {
-        console.log(images);
-    }, [images]);
-
 
     const [index, setIndex] = useState<number>(0);
     const [currentImage, setCurrentImage] = useState<string>(images[index]);
