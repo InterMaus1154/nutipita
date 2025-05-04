@@ -47,12 +47,14 @@ const ProductBox: FC<Props> = ({productData}) => {
     return (
         <div className={"product-box"}>
             <div className="product-box-header">
-                <img className={"product-image"} key={currentImage} src={currentImage}
-                     alt=""/>
+                <div className="product-image-wrapper">
+                    <img className={"product-image"} key={currentImage} src={currentImage}
+                         alt={`Image of ${productData.title}`}/>
+                </div>
                 <button className={"image-selector-button left"} onClick={leftClickHandler}
-                        aria-label={"Go left image"}>&lt;</button>
+                        aria-label={"Show previous image"}>&lt;</button>
                 <button className={"image-selector-button right"} onClick={rightClickHandler}
-                        aria-label={"Go right image"}>&gt;</button>
+                        aria-label={"Show next image"}>&gt;</button>
             </div>
             <div className="product-box-body">
                 <div className="product-box-body-header">
