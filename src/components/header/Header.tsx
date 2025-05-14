@@ -72,8 +72,8 @@ const Header: FC = () => {
                             <li>
                                 <NavLink onClick={() => setNavVisible(false)} to={"/products"}>Products</NavLink>
                             </li>
-                            <li>
-                                <NavLink onClick={() => setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
+                            <li aria-hidden={true}>
+                                <NavLink aria-hidden={true} onClick={() => setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
                             </li>
                             <li>
                                 <NavLink onClick={() => setNavVisible(false)} to={"/contact"}>Contacts</NavLink>

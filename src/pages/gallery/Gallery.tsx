@@ -11,12 +11,20 @@ const Gallery : FC = () => {
 
     useEffect(() => {
         if(images.length === 0) return;
-        console.log(images);
     }, [images]);
 
     return (
         <section className={"page gallery-page"}>
             <h2 className="section-title">Gallery</h2>
+            <div className="image-list">
+                {images.map((image: string) => {
+                    return(
+                        <div className={"gallery-image-wrapper"} aria-hidden={true}>
+                            <img src={image} alt="" aria-hidden={true}/>
+                        </div>
+                    );
+                })}
+            </div>
         </section>
     );
 };

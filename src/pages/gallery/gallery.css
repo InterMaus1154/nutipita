@@ -1,0 +1,23 @@
+.image-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.image-list .gallery-image-wrapper{
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: scale 250ms ease-in;
+    scale: 1;
+
+    &:hover{
+        opacity: .6;
+        scale: .96;
+        transition: scale 250ms ease-in;
+    }
+
+    img{
+        border-radius: .25rem;
+
+    }
+}
