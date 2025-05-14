@@ -13,6 +13,9 @@ const fetchImages = (folder: string, setter: Dispatch<SetStateAction<string[]>>)
             case "white_medium":
                 images = import.meta.glob('/src/images/products/white_medium/*.{jpg,png,jpeg,svg}') as Record<string, () => Promise<{ default: string }>>;
                 break;
+            case "gallery":
+                images = import.meta.glob("/src/images/gallery/*.{jpg,png,jpeg,svg}") as Record<string, () => Promise<{default: string}>>;
+                break;
             default:
                 images = {};
         }

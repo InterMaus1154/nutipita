@@ -7,6 +7,7 @@ import {faArrowUp} from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {HeaderContext} from "./context/HeaderContext.ts";
 import Spinner from "./components/spinner/Spinner.tsx";
+import Gallery from "./pages/gallery/Gallery.tsx";
 
 const Home = lazy(() => import("./pages/home/Home.tsx"));
 const Contact = lazy(() => import("./pages/contact/Contact.tsx"));
@@ -65,6 +66,7 @@ const App: FC = () => {
                             <Route index path={"/"} element={<Home/>}/>
                             <Route path={"/contact"} element={<Contact/>}/>
                             <Route path={"/products"} element={<Products/>}/>
+                            <Route path={"/gallery"} element={<Gallery />} />
                         </Routes>
                     </Wrapper>
                 </Suspense>
