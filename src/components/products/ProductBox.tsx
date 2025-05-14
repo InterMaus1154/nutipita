@@ -1,8 +1,8 @@
 import {FC, useEffect, useState} from 'react';
 import ProductDetails from "./ProductDetails.ts";
 import {Link} from "react-router-dom";
-import fetchImages from "./FetchImages.ts";
-import preLoadImage from "./ImagePreloader.ts";
+import fetchImages from "../FetchImages.ts";
+import preLoadImage from "../ImagePreloader.ts";
 
 interface Props {
     productData: ProductDetails;

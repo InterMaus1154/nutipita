@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import "./gallery.css";
-import fetchImages from "../../components/products/FetchImages.ts";
+import fetchImages from "../../components/FetchImages.ts";
 const Gallery : FC = () => {
 
     const [images, setImages] = useState<string[]>([]);
