@@ -112,3 +112,7 @@ main{
     opacity: 0;
     transform: translateY(200%);
 }
+
+.no-scroll{
+    overflow: hidden;
+}

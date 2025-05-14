@@ -16,6 +16,20 @@ const ImageViewer: FC<Props> = ({visible, setVisible, images, currentImageIndex}
         setSelectedImage(images[currentImageIndex]);
     }, [currentImageIndex, images]);
 
+    useEffect(() => {
+        // Disable body scroll
+        if(visible){
+            document.body.classList.add("no-scroll");
+        }else{
+            document.body.classList.remove("no-scroll");
+        }
+
+        return () => {
+            // Re-enable body scroll when component unmounts
+            document.body.classList.remove("no-scroll");
+        };
+    }, [visible]);
+
     return (
         visible &&
         <div className={"image-viewer-overlay"}>
@@ -23,6 +37,15 @@ const ImageViewer: FC<Props> = ({visible, setVisible, images, currentImageIndex}
             <div className="image-viewer">
                 <div className="selected-image-wrapper">
                     <img src={selectedImage} alt=""/>
+                </div>
+                <div className="image-carousel">
+                    {images.map((image: string, index: number) => {
+                        return(
+                            <div className={"image-carousel-wrapper"}>
+                                <img src={image} alt=""/>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
