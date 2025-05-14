@@ -10,12 +10,20 @@ interface Props {
 
 const ImageViewer: FC<Props> = ({visible, setVisible, images, currentImageIndex}) => {
 
+    const [selectedImage, setSelectedImage] = useState<string>(images[currentImageIndex]);
+
+    useEffect(() => {
+        setSelectedImage(images[currentImageIndex]);
+    }, [currentImageIndex, images]);
 
     return (
         visible &&
         <div className={"image-viewer-overlay"}>
+            <button className={"close-image-viewer-button"} onClick={()=> {setVisible(false)}}>Close</button>
             <div className="image-viewer">
-
+                <div className="selected-image-wrapper">
+                    <img src={selectedImage} alt=""/>
+                </div>
             </div>
         </div>
     );

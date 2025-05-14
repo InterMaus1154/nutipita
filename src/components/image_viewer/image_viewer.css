@@ -12,6 +12,13 @@
     align-items: center;
 }
 
+.close-image-viewer-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
 .image-viewer{
 
 }
