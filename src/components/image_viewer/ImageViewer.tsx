@@ -75,10 +75,14 @@ const ImageViewer: FC<Props> = ({visible, setVisible, images, currentImageIndex}
                 </div>
                 <div className="control-buttons">
                     {/*show previous image*/}
-                    <button onClick={onPreviousImageHandler} aria-label={"Show previous image"}
+                    <button onClick={onPreviousImageHandler}
+                            className={"image-selector-button left"}
+                            aria-label={"Show previous image"}
                             title={"Show previous image"}>&lt;</button>
                     {/*show next image*/}
-                    <button onClick={onNextImageHandler} aria-label={"Show next image"}
+                    <button onClick={onNextImageHandler}
+                            className={"image-selector-button right"}
+                            aria-label={"Show next image"}
                             title={"Show next image"}>&gt;</button>
                 </div>
             </div>

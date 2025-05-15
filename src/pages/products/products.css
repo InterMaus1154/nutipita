@@ -31,38 +31,7 @@
     object-fit: cover;
 }
 
-.product-box .product-box-header .image-selector-button{
-    position: absolute;
-    top: 50%;
 
-    font-size: 1.5rem;
-    padding: 1rem;
-    font-family: inherit;
-    background: rgba(255, 255, 255, .7);
-    border-radius: 50%;
-    border: 1px solid var(--gray);
-    cursor: pointer;
-    color: #000;
-    font-weight: bold;
-
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover{
-        background-color: var(--gray-bg);
-    }
-}
-
-.product-box .product-box-header .image-selector-button.left{
-    left: 5px;
-}
-.product-box .product-box-header .image-selector-button.right{
-    right: 5px;
-}
 
 .product-box .product-box-header .product-image{
     border-top-left-radius: var(--product-box-radius, .25rem);
