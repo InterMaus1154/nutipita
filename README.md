@@ -1,2 +1,4 @@
-# Nutipita
-## Website for a pita bread bakery in London
+# Website of a London Pita Bread bakery
+[Check the website here](https://nutipita.co.uk)
+
+*Under development*
