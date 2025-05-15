@@ -25,15 +25,17 @@ const Gallery: FC = () => {
                 {/*render images*/}
                 {images.map((image: string, index: number) => {
                     return (
-                        <div className={"gallery-image-wrapper"} aria-hidden={true} title={"Click to view in large"}>
+                        <div className={"gallery-image-wrapper"}
+                             onClick={() => {
+                                 setSelectedImageIndex(index);
+                                 setImageViewerVisible(true);
+                             }}
+                             aria-hidden={true} title={"Click to view in large"}>
                             <div className="expand-icon" aria-hidden={true}>
                                 <img src="icon/expand-icon.png" alt=""/>
                             </div>
                             <img src={image} alt="" aria-hidden={true}
-                                 onClick={() => {
-                                     setSelectedImageIndex(index);
-                                     setImageViewerVisible(true);
-                                 }}
+
                             />
                         </div>
                     );
