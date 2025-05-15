@@ -16,8 +16,29 @@
 
 .close-image-viewer-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 25px;
+
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-family: inherit;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 50%;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        background-color: var(--gray-bg);
+    }
 }
 
 .image-viewer {
@@ -32,4 +53,3 @@
 .image-viewer .selected-image-wrapper {
     width: clamp(400px, 50vw + 3rem, 900px);
 }
-
