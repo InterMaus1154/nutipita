@@ -1,4 +1,4 @@
-import {Dispatch, FC, SetStateAction, useEffect, useState} from "react";
+import {Dispatch, FC, SetStateAction, useEffect, useRef, useState} from "react";
 import "./image_viewer.css";
 
 interface Props {
@@ -13,44 +13,63 @@ const ImageViewer: FC<Props> = ({visible, setVisible, images, currentImageIndex}
     const [selectedImage, setSelectedImage] = useState<string>(images[currentImageIndex]);
     const [selectedImageIndex, setSelectedImageIndex] = useState<number>(currentImageIndex);
 
+    const imageViewerRef = useRef<HTMLDivElement>(document.createElement("div"));
+
+    // show previous image
     const onPreviousImageHandler = () => {
         setSelectedImageIndex(prevState => ((prevState - 1) + images.length) % images.length);
     };
 
+    // show next image
     const onNextImageHandler = () => {
         setSelectedImageIndex(prevState => (prevState + 1) % images.length);
     };
 
+    // track index coming from props
     useEffect(() => {
         setSelectedImageIndex(currentImageIndex);
     }, [currentImageIndex]);
 
+    // track component index state
     useEffect(() => {
         setSelectedImage(images[selectedImageIndex]);
     }, [selectedImageIndex, images, setSelectedImage]);
 
+    // track if component is visible
     useEffect(() => {
-        // Disable body scroll
         if (visible) {
             document.body.classList.add("no-scroll");
         } else {
             document.body.classList.remove("no-scroll");
         }
 
+        const onMouseDownHandler = (e: MouseEvent) => {
+            // check if visible, and if the click was made within the component
+            if (visible && imageViewerRef.current && !imageViewerRef.current.contains(e.target as Node)) {
+                setVisible(false);
+            }
+        }
+
+        document.addEventListener("mousedown", onMouseDownHandler);
+
         return () => {
             // Re-enable body scroll when component unmounts
             document.body.classList.remove("no-scroll");
+            document.removeEventListener("mousedown", onMouseDownHandler);
         };
-    }, [visible]);
+    }, [setVisible, visible]);
 
     return (
         visible &&
         <div className={"image-viewer-overlay"}>
-            <button className={"close-image-viewer-button"} onClick={() => {
-                setVisible(false)
-            }}>Close
+            <button className={"close-image-viewer-button"}
+                    aria-label={"Close image viewer"}
+                    title={"Close image viewer"}
+                    onClick={() => {
+                        setVisible(false)
+                    }}>X
             </button>
-            <div className="image-viewer">
+            <div className="image-viewer" ref={imageViewerRef}>
                 <div className="selected-image-wrapper">
                     <img src={selectedImage} alt=""/>
                 </div>

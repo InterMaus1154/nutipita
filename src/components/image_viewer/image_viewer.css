@@ -1,4 +1,4 @@
-.image-viewer-overlay{
+.image-viewer-overlay {
     position: fixed;
     inset: 0;
     width: 100vw;
@@ -14,15 +14,13 @@
     /*padding: 2rem;*/
 }
 
-.close-image-viewer-button{
+.close-image-viewer-button {
     position: absolute;
     top: 0;
     right: 0;
-
 }
 
-.image-viewer{
-
+.image-viewer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -30,19 +28,7 @@
     justify-content: center;
 }
 
-.image-viewer .selected-image-wrapper{
-    width: clamp(300px, 40vw + 2rem, 900px);
+.image-viewer .selected-image-wrapper {
+    width: clamp(400px, 50vw + 3rem, 900px);
 }
 
-.image-viewer .image-carousel{
-    width: clamp(300px, 50vw + 2rem, 900px);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    max-height: 200px;
-    overflow-y: scroll;
-}
-
-.image-viewer .image-carousel .image-carousel-wrapper{
-    width: clamp(75px, 120px, 150px);
-}
