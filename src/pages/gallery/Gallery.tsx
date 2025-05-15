@@ -9,6 +9,7 @@ const Gallery: FC = () => {
     const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
     const [imageViewerVisible, setImageViewerVisible] = useState<boolean>(false);
 
+    // load images on load
     useEffect(() => {
         fetchImages("gallery", setImages);
     }, []);
@@ -21,9 +22,13 @@ const Gallery: FC = () => {
         <section className={"page gallery-page"}>
             <h2 className="section-title">Gallery</h2>
             <div className="image-list">
+                {/*render images*/}
                 {images.map((image: string, index: number) => {
                     return (
-                        <div className={"gallery-image-wrapper"} aria-hidden={true}>
+                        <div className={"gallery-image-wrapper"} aria-hidden={true} title={"Click to view in large"}>
+                            <div className="expand-icon" aria-hidden={true}>
+                                <img src="icon/expand-icon.png" alt=""/>
+                            </div>
                             <img src={image} alt="" aria-hidden={true}
                                  onClick={() => {
                                      setSelectedImageIndex(index);
@@ -34,6 +39,7 @@ const Gallery: FC = () => {
                     );
                 })}
             </div>
+            {/*expandable gallery*/}
             <ImageViewer images={images}
                          currentImageIndex={selectedImageIndex}
                          visible={imageViewerVisible}

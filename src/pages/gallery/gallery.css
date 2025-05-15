@@ -9,6 +9,7 @@
     cursor: pointer;
     transition: scale 250ms ease-in;
     scale: 1;
+    position: relative;
 
     &:hover{
         opacity: .6;
@@ -16,8 +17,31 @@
         transition: scale 250ms ease-in;
     }
 
+    .expand-icon{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: rgba(255, 255, 255, .3);
+        border-radius: .25rem;
+        width: 32px;
+
+        display: none;
+    }
+
+    &:hover .expand-icon{
+        display: block;
+    }
+
+    @media(max-width: 768px){
+        .expand-icon{
+            display: block;
+        }
+    }
+
     img{
         border-radius: .25rem;
 
     }
+
+
 }
