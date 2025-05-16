@@ -51,5 +51,5 @@
 }
 
 .image-viewer .selected-image-wrapper {
-    width: clamp(400px, 50vw + 3rem, 900px);
+    width: clamp(400px, 90vw + 3rem, 1200px);
 }
