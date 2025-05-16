@@ -159,6 +159,7 @@ main{
     width: 32px;
 
     display: none;
+    z-index: 900;
 }
 
 @media(max-width: 768px){

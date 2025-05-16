@@ -49,8 +49,16 @@ const ProductBox: FC<Props> = ({productData}) => {
 
     return (
         <div className={"product-box"}>
+            <div className="expand-icon" aria-hidden={true}>
+                <img src="icon/expand-icon.png" alt="" aria-hidden={true}/>
+            </div>
             <div className="product-box-header">
-                <div className="product-image-wrapper">
+                <div className="product-image-wrapper"
+                     onClick={() => {
+                         setImageViewerVisible(true)
+                     }}
+                     title={"Click to enlarge image"}
+                >
                     <img className={"product-image"} key={currentImage} src={currentImage}
                          alt={`Image of ${productData.title}`}/>
                 </div>

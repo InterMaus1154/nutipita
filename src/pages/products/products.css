@@ -18,6 +18,10 @@
     box-shadow: 5px 0 10px 2px var(--gray);
 
     position: relative;
+    
+    &:hover .expand-icon{
+        display: block;
+    }
 }
 
 .product-box .product-box-header{
@@ -26,6 +30,10 @@
 
 .product-box .product-box-header .product-image-wrapper{
     height: 350px;
+    cursor: pointer;
+    &:hover{
+        opacity: .8;
+    }
 }
 
 .product-box .product-box-header .product-image-wrapper .product-image{
