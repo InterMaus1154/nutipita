@@ -16,6 +16,8 @@
     border: 1px solid var(--gray);
     border-radius: var(--product-box-radius, .25rem);
     box-shadow: 5px 0 10px 2px var(--gray);
+
+    position: relative;
 }
 
 .product-box .product-box-header{

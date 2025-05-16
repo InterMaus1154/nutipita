@@ -3,12 +3,15 @@ import ProductDetails from "./ProductDetails.ts";
 import {Link} from "react-router-dom";
 import fetchImages from "../FetchImages.ts";
 import preLoadImage from "../ImagePreloader.ts";
+import ImageViewer from "../image_viewer/ImageViewer.tsx";
 
 interface Props {
     productData: ProductDetails;
 }
 
 const ProductBox: FC<Props> = ({productData}) => {
+
+    const [imageViewerVisible, setImageViewerVisible] = useState<boolean>(false);
 
     // product images
     const [images, setImages] = useState<string[]>([]);
@@ -72,6 +75,10 @@ const ProductBox: FC<Props> = ({productData}) => {
                 </div>
                 <p className={"product-cta"}>Please <Link to={'/contact'}>contact us</Link> for pricing!</p>
             </div>
+            <ImageViewer visible={imageViewerVisible}
+                         setVisible={setImageViewerVisible}
+                         images={images}
+                         currentImageIndex={index}/>
         </div>
     );
 };

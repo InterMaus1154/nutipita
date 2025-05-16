@@ -1,44 +1,27 @@
-.image-list{
+.image-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
-.image-list .gallery-image-wrapper{
+.image-list .gallery-image-wrapper {
     border-radius: .25rem;
     cursor: pointer;
     transition: scale 250ms ease-in;
     scale: 1;
     position: relative;
 
-    &:hover{
+    &:hover {
         opacity: .6;
         scale: .96;
         transition: scale 250ms ease-in;
     }
 
-    .expand-icon{
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        background-color: rgba(255, 255, 255, .3);
-        border-radius: .25rem;
-        width: 32px;
-
-        display: none;
-    }
-
-    &:hover .expand-icon{
+    &:hover .expand-icon {
         display: block;
     }
 
-    @media(max-width: 768px){
-        .expand-icon{
-            display: block;
-        }
-    }
-
-    img{
+    img {
         border-radius: .25rem;
 
     }
