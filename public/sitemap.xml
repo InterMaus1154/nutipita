@@ -7,20 +7,24 @@
         <loc>https://nutipita.co.uk/</loc>
         <priority>1.0</priority>
         <changefreq>weekly</changefreq>
+        <lastmod>2025-05-17</lastmod>
     </url>
     <url>
         <loc>https://nutipita.co.uk/contact</loc>
         <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
+        <lastmod>2025-05-17</lastmod>
     </url>
     <url>
         <loc>https://nutipita.co.uk/products</loc>
         <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
+        <lastmod>2025-05-17</lastmod>
     </url>
     <url>
         <loc>https://nutipita.co.uk/gallery</loc>
         <priority>0.6</priority>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
+        <lastmod>2025-05-17</lastmod>
     </url>
 </urlset>
