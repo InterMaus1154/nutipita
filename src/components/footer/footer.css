@@ -5,6 +5,16 @@ footer{
     color: #fff;
 }
 
-footer .copy{
+footer ._wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer ._wrapper .copy{
     font-weight: bold;
+}
+
+footer ._wrapper a{
+    text-decoration: underline;
 }

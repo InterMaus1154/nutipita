@@ -16,12 +16,12 @@ const Home: FC = () => {
                     <div className={"title-block"}>
                         <h2 className={"section-title"}>Welcome to Nuti Pita!</h2>
                         <h3 className={"subtitle"}>
-                            A Family Tradition of Quality.
+                            A Family Tradition of Quality In London.
                         </h3>
                     </div>
                     <p>
                         Established in 2025 by Tamas and Gabriella, a married couple with over 30 years of baking
-                        experience, Nuti Pita is a family-run artisan bakery that specializes in premium, authentic,
+                        experience, Nuti Pita is a family-run artisan bakery in North London that specializes in premium, authentic,
                         handmade pita
                         bread.
                     </p>
