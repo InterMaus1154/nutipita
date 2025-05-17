@@ -66,7 +66,7 @@ const App: FC = () => {
                             <Route index path={"/"} element={<Home/>}/>
                             <Route path={"/contact"} element={<Contact/>}/>
                             <Route path={"/products"} element={<Products/>}/>
-                            <Route path={"/gallery"} element={<Gallery />} />
+                            <Route path={"/gallery"} element={<Gallery/>}/>
                         </Routes>
                     </Wrapper>
                 </Suspense>
