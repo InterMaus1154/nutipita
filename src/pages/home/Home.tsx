@@ -32,7 +32,7 @@ const Home: FC = () => {
                 <h2 className={"section-title"}>Where Quality Meets Care</h2>
                 <div className={"section-block"}>
                     <AnimatedBox className={"paragraph"}>
-                        At Nutipita, quality isn’t just a promise—it’s a tradition. As a family business, we ensure
+                        At Nuti Pita, quality isn’t just a promise—it’s a tradition. As a family business, we ensure
                         that
                         every piece of pita bread is crafted with care and attention to detail.
                     </AnimatedBox>

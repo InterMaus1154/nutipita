@@ -30,20 +30,6 @@ const Contact: FC = () => {
                         </a>
                         <a href="https://wa.me/447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
-                    {/*<AnimatedBox className="contact-box">*/}
-                    {/*    <h3 className="contact-box-header">Instagram</h3>*/}
-                    {/*    <a className="icon-wrapper" href={"#"} aria-label={"Instagram"}>*/}
-                    {/*        <img src="icon/instaicon.png" alt="Instagram icon" aria-hidden={true}/>*/}
-                    {/*    </a>*/}
-                    {/*    <a href="" className={"contact-info"}>@nutipita</a>*/}
-                    {/*</AnimatedBox>*/}
-                    {/*<AnimatedBox className="contact-box">*/}
-                    {/*    <h3 className="contact-box-header">TikTok</h3>*/}
-                    {/*    <a className="icon-wrapper" href={"#"} aria-label={"Tiktok"}>*/}
-                    {/*        <img src="icon/tiktokicon.png" alt="Tiktok icon" aria-hidden={true}/>*/}
-                    {/*    </a>*/}
-                    {/*    <a href="" className={"contact-info"}>@nutipita</a>*/}
-                    {/*</AnimatedBox>*/}
                     <AnimatedBox className="contact-box">
                         <h3 className={"contact-box-header"}>Location</h3>
                         <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"} aria-label={"Location of our bakery"}>
