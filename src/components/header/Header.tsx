@@ -54,7 +54,7 @@ const Header: FC = () => {
             <header className={!isHeaderVisible ? "full-width float" : "full-width"} ref={headerRef}>
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
-                        <h1 aria-label={"Nutipita"} title={"Go to home page"}>
+                        <h1 aria-label={"Nuti Pita: Handmade Authentic Pita Bread"} title={"Go to home page"}>
                             <NavLink to={"/"} onClick={() => {
                                 setNavVisible(false)
                             }}>
@@ -62,7 +62,7 @@ const Header: FC = () => {
                             </NavLink>
                         </h1>
                         <h2>Artisan Pita Bakery</h2>
-                        <HamburgerNavButton _ref={buttonRef} isNavVisible={isNavVisible} setNavVisible={setNavVisible} />
+                        <HamburgerNavButton _ref={buttonRef} isNavVisible={isNavVisible} setNavVisible={setNavVisible}/>
                     </div>
                     <nav className={isNavVisible ? "nav-visible" : "nav-hidden"} ref={navRef}>
                         <ul>
@@ -73,7 +73,8 @@ const Header: FC = () => {
                                 <NavLink onClick={() => setNavVisible(false)} to={"/products"}>Products</NavLink>
                             </li>
                             <li aria-hidden={true}>
-                                <NavLink aria-hidden={true} onClick={() => setNavVisible(false)} to={"/gallery"}>Gallery</NavLink>
+                                <NavLink aria-hidden={true} onClick={() => setNavVisible(false)}
+                                         to={"/gallery"}>Gallery</NavLink>
                             </li>
                             <li>
                                 <NavLink onClick={() => setNavVisible(false)} to={"/contact"}>Contacts</NavLink>
