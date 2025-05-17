@@ -18,7 +18,7 @@ main:has(.home-hero) .page{
 
 article.home-hero{
     background-color: #e7e7e7;
-    background-image: url("/images/banner_new.jpg");
+    background-image: url("/images/banner.webp");
     background-size: cover;
     background-position: center;
     min-height: calc(100vh - 110px);
@@ -160,7 +160,7 @@ article.home-hero .section-title{
 /*cta section*/
 .cta-section{
     background-color: #e7e7e7;
-    background-image: url("/images/banner_new.jpg");
+    background-image: url("/images/banner.webp");
     background-size: cover;
     background-position: center;
 
