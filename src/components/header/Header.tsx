@@ -54,14 +54,14 @@ const Header: FC = () => {
             <header className={!isHeaderVisible ? "full-width float" : "full-width"} ref={headerRef}>
                 <div className="_wrapper">
                     <div className={"slogan-wrapper"}>
-                        <h1 aria-label={"Nuti Pita: Handmade Authentic Pita Bread"} title={"Go to home page"}>
+                        <span className={"header-logo"} aria-label={"Nuti Pita: Handmade Authentic Pita Bread"} title={"Go to home page"}>
                             <NavLink to={"/"} onClick={() => {
                                 setNavVisible(false)
                             }}>
                                 <img src="/icon/logo_high_res_actual.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
-                        </h1>
-                        <h2>Artisan Pita Bakery</h2>
+                        </span>
+                        <h1>Artisan Pita Bakery</h1>
                         <HamburgerNavButton _ref={buttonRef} isNavVisible={isNavVisible} setNavVisible={setNavVisible}/>
                     </div>
                     <nav className={isNavVisible ? "nav-visible" : "nav-hidden"} ref={navRef}>

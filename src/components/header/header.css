@@ -44,12 +44,12 @@ header nav ul{
     font-size: 1.25rem;
 }
 
-header h1{
+header .header-logo{
     width: 7rem;
     transition: width 250ms ease-in;
 }
 
-header h2{
+header h1{
     font-weight: normal;
     text-align: center;
     font-size: 1.5rem;
@@ -95,17 +95,6 @@ header nav ul li a:hover{
         position: relative;
     }
 
-
-    /*header nav.nav-visible::before{*/
-    /*    content: '';*/
-    /*    opacity: 1;*/
-    /*    transition: opacity 250ms ease-in;*/
-    /*    position: absolute;*/
-    /*    width: 120px;*/
-    /*    height: 120px;*/
-    /*    background-image: url("/images/nav_img.jpg");*/
-    /*    background-size: cover;*/
-    /*}*/
 
     header nav ul{
         width: 100%;
@@ -209,7 +198,7 @@ header.float{
     backdrop-filter: blur(10px);
 }
 
-header.float h1{
+header.float .header-logo{
     width: 5rem;
     transition: width 250ms ease-in;
 }
