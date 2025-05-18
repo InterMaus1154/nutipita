@@ -61,7 +61,7 @@ const Header: FC = () => {
                                 <img src="/icon/logo_high_res_actual.png" alt="Logo of Nutipita bakery"/>
                             </NavLink>
                         </span>
-                        <h1>London Artisan Pita Bakery</h1>
+                        <h1>Artisan Pita Bakery</h1>
                         <HamburgerNavButton _ref={buttonRef} isNavVisible={isNavVisible} setNavVisible={setNavVisible}/>
                     </div>
                     <nav className={isNavVisible ? "nav-visible" : "nav-hidden"} ref={navRef}>
