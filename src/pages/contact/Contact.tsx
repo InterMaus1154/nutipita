@@ -10,34 +10,43 @@ const Contact: FC = () => {
                 <h2 className={"section-title"}>Contacts</h2>
                 <div className="contact-wrapper">
                     <AnimatedBox className="contact-box">
-                        <h3 className="contact-box-header">Mobile</h3>
-                        <a href={"tel:+447754226325"} className="icon-wrapper" aria-label={"Phone number: +447754226325 "}>
+                        <a href={"tel:+447754226325"} className="icon-wrapper"
+                           aria-label={"Phone number: +447754226325 "}>
                             <img src="icon/phoneicon.png" alt="Phone icon" aria-hidden={true}/>
                         </a>
                         <a href="tel:+447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
-                        <h3 className="contact-box-header">Email</h3>
-                        <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper email-icon" aria-label={"Email address: nutipita@gmail.com"}>
+                        <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper email-icon"
+                           aria-label={"Email address: nutipita@gmail.com"}>
                             <img src={"icon/email.png"} alt={"Email icon"} aria-hidden={true}/>
                         </a>
                         <a className={"contact-info"} href="mailto:nutipita@gmail.com">nutipita@gmail.com</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
-                        <h3 className="contact-box-header">WhatsApp</h3>
-                        <a href={"https://wa.me/447754226325"} className="icon-wrapper" aria-label={"Whatsapp number: +447754226325"}>
+                        <a href={"https://wa.me/447754226325"} className="icon-wrapper"
+                           aria-label={"Whatsapp number: +447754226325"}>
                             <img src="icon/whatsappicon.png" alt="Whatsapp icon" aria-hidden={true}/>
                         </a>
                         <a href="https://wa.me/447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
-                        <h3 className={"contact-box-header"}>Location</h3>
-                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"} aria-label={"Location of our bakery"}>
-                            <img src="icon/mapicon.png" alt="Map pin icon" aria-hidden={true}/>
+                        <a target={"_blank"} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"}
+                           aria-label={"Location of our bakery"}>
+                            <img src="icon/mapicon.png" alt="Bakery location" aria-hidden={true}/>
                         </a>
-                        <a href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
+                        <a target={"_blank"} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
                            className={"contact-info"}>
-                            Unit 13,Langhedge IE,N182TQ
+                            Unit 13,Langhedge IE,N182TQ
+                        </a>
+                    </AnimatedBox>
+                    <AnimatedBox className={"contact-box"}>
+                        <a target={"_blank"} href="https://www.facebook.com/nutipita" className={"icon-wrapper"}
+                           aria-label={"Nuti Pita Bakery Facebook Page"}>
+                            <img src="icon/fb.png" alt="Nuti pita facebook" aria-hidden={true}/>
+                        </a>
+                        <a target={"_blank"} href="https://www.facebook.com/nutipita">
+                            Visit us on Facebook!
                         </a>
                     </AnimatedBox>
                 </div>
