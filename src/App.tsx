@@ -1,4 +1,4 @@
-import {FC, lazy, ReactNode, Suspense, useContext, useLayoutEffect, startTransition} from 'react';
+import {FC, ReactNode, useContext, useLayoutEffect, startTransition} from 'react';
 import "./App.css";
 import Header from "./components/header/Header.tsx";
 import Footer from "./components/footer/Footer.tsx";
@@ -6,13 +6,11 @@ import {Routes, Route, useLocation} from "react-router-dom";
 import {faArrowUp} from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {HeaderContext} from "./context/HeaderContext.ts";
-import Spinner from "./components/spinner/Spinner.tsx";
 import Gallery from "./pages/gallery/Gallery.tsx";
-
-const Home = lazy(() => import("./pages/home/Home.tsx"));
-const Contact = lazy(() => import("./pages/contact/Contact.tsx"));
-const Products = lazy(() => import("./pages/products/Products.tsx"));
-const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+import Home from "./pages/home/Home.tsx";
+import Contact from "./pages/contact/Contact.tsx";
+import Products from "./pages/products/Products.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const Wrapper: FC<{ children: ReactNode }> = ({children}) => {
 
@@ -59,7 +57,6 @@ const App: FC = () => {
         <div className={"app-component"}>
             <Header/>
             <main>
-                <Suspense fallback={<Spinner/>}>
                     <Wrapper>
                         <Routes>
                             <Route path={"*"} element={<NotFound/>}/>
@@ -69,7 +66,6 @@ const App: FC = () => {
                             <Route path={"/gallery"} element={<Gallery/>}/>
                         </Routes>
                     </Wrapper>
-                </Suspense>
             </main>
             <Footer/>
             <ScrollToButton/>
