@@ -55,7 +55,7 @@ const Contact: FC = () => {
                 <h2 className="section-title">Map</h2>
                 <AnimatedBox className="location-wrapper">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.762984332091!2d-0.0717926231477124!3d51.60923127183671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761e9818999969%3A0xd47e022c32f85e4a!2sLanghedge%20Industrial%20Estate%2C%20Langhedge%20Ln%2C%20London%20N18%202TQ!5e0!3m2!1sen!2suk!4v1730372582475!5m2!1sen!2suk"
+                        src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.762984332095!2d-0.07179262352363315!3d51.60923127183663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761f17cc8cf0fd%3A0x6e1d731a6bd483b3!2sNuti%20Pita!5e0!3m2!1sen!2suk!4v1748110346640!5m2!1sen!2suk"}
                         allowFullScreen={true} loading="lazy"
                         title={"Google map of the location"}
                         referrerPolicy="no-referrer-when-downgrade"></iframe>
