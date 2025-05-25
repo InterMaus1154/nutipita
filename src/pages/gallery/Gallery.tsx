@@ -2,6 +2,7 @@ import {FC, useEffect, useState} from "react";
 import "./gallery.css";
 import fetchImages from "../../components/FetchImages.ts";
 import ImageViewer from "../../components/image_viewer/ImageViewer.tsx";
+import {Helmet} from "react-helmet-async";
 
 const Gallery: FC = () => {
 
@@ -20,6 +21,9 @@ const Gallery: FC = () => {
 
     return (
         <section className={"page gallery-page"}>
+            <Helmet>
+                <link rel="canonical" href="https://nutipita.co.uk/gallery" />
+            </Helmet>
             <h2 className="section-title">Gallery</h2>
             <div className="image-list">
                 {/*render images*/}

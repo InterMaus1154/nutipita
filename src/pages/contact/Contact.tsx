@@ -1,11 +1,15 @@
 import {FC} from 'react';
 import AnimatedBox from "../../components/AnimatedBox.tsx";
 import "./contact.css";
+import {Helmet} from "react-helmet-async";
 
 const Contact: FC = () => {
 
     return (
         <section className={"page contact-page"}>
+            <Helmet>
+                <link rel="canonical" href="https://nutipita.co.uk/contact" />
+            </Helmet>
             <article className={"contact-details"}>
                 <h2 className={"section-title"}>Contacts</h2>
                 <div className="contact-wrapper">
