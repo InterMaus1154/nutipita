@@ -50,7 +50,16 @@ const Contact: FC = () => {
                             <img src="icon/fb.png" alt="Nuti pita facebook" aria-hidden={true}/>
                         </a>
                         <a target={"_blank"} href="https://www.facebook.com/nutipita">
-                            Visit us on Facebook!
+                            Folow us on Facebook!
+                        </a>
+                    </AnimatedBox>
+                    <AnimatedBox className={"contact-box"}>
+                        <a target={"_blank"} href="https://www.instagram.com/nutipita/" className={"icon-wrapper"}
+                           aria-label={"Nuti Pita Bakery Instagram Page"}>
+                            <img src="icon/insta.png" alt="Nuti pita instagram" aria-hidden={true}/>
+                        </a>
+                        <a target={"_blank"} href="https://www.instagram.com/nutipita/">
+                            Follow us on Instagram!
                         </a>
                     </AnimatedBox>
                 </div>
