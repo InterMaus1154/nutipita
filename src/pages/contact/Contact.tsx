@@ -7,9 +7,22 @@ const Contact: FC = () => {
 
     return (
         <section className={"page contact-page"}>
+            {/*custom header*/}
             <Helmet>
-                <link rel="canonical" href="https://nutipita.co.uk/contact" />
+                <title>Contact Us - Nuti Pita: Fresh, Handmade, Authentic Pita Bread in London</title>
+                <meta name="description"
+                      content="Have a question or want to place a pita order? Contact Nuti Pita, a London-based family bakery specializing in fresh, handmade pita bread. We'd love to hear from you!"/>
+                <meta property="og:title"
+                      content="Contact - Nuti Pita: Fresh, Handmade, Authentic Pita Bread in London"/>
+                <meta property="og:description"
+                      content="Have a question or want to place a pita order? Contact Nuti Pita, a London-based family bakery specializing in fresh, handmade pita bread. We'd love to hear from you!"/>
+                <meta property="og:url" content="https://nutipita.co.uk/contact"/>
+                <meta property="og:image" content="https://nutipita.co.uk/icon/icon_300x300.png"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:locale" content="en_GB"/>
+                <link rel="canonical" href="https://nutipita.co.uk/contact"/>
             </Helmet>
+            {/*---content---*/}
             <article className={"contact-details"}>
                 <h2 className={"section-title"}>Contacts</h2>
                 <div className="contact-wrapper">

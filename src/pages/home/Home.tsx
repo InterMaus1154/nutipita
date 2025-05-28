@@ -12,6 +12,17 @@ const Home: FC = () => {
     return (
         <section className={"page home-page"}>
             <Helmet>
+                <title>Nuti Pita: Fresh, Handmade, Authentic Pita Bread in London</title>
+                <meta name="description"
+                      content="Nuti Pita — a London family bakery specializing in authentic, handmade, artisan pita bread, freshly baked daily with love and premium quality ingredients"/>
+                <meta property="og:title"
+                      content="Nuti Pita: Fresh, Handmade, Authentic Pita Bread in London"/>
+                <meta property="og:description"
+                      content="Nuti Pita — a London family bakery specializing in authentic, handmade, artisan pita bread, freshly baked daily with love and premium quality ingredients"/>
+                <meta property="og:url" content="https://nutipita.co.uk/"/>
+                <meta property="og:image" content="https://nutipita.co.uk/icon/icon_300x300.png"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:locale" content="en_GB"/>
                 <link rel="canonical" href="https://nutipita.co.uk/" />
             </Helmet>
             {/*hero section*/}

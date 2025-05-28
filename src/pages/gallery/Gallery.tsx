@@ -22,7 +22,18 @@ const Gallery: FC = () => {
     return (
         <section className={"page gallery-page"}>
             <Helmet>
-                <link rel="canonical" href="https://nutipita.co.uk/gallery" />
+                <title>Gallery - Nuti Pita: Fresh, Handmade, Authentic Pita Bread in London</title>
+                <meta name="description"
+                      content="Explore our gallery of fresh, handmade pita bread and the artisan process that brings traditional flavours to life in London."/>
+                <meta property="og:title"
+                      content="Gallery - Nuti Pita: Fresh, Handmade, Authentic Pita Bread in London"/>
+                <meta property="og:description"
+                      content="Explore our gallery of fresh, handmade pita bread and the artisan process that brings traditional flavours to life in London."/>
+                <meta property="og:url" content="https://nutipita.co.uk/gallery"/>
+                <meta property="og:image" content="https://nutipita.co.uk/icon/icon_300x300.png"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:locale" content="en_GB"/>
+                <link rel="canonical" href="https://nutipita.co.uk/gallery"/>
             </Helmet>
             <h2 className="section-title">Gallery</h2>
             <div className="image-list">
