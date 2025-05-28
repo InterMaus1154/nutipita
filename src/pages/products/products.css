@@ -41,8 +41,6 @@
     object-fit: cover;
 }
 
-
-
 .product-box .product-box-header .product-image{
     border-top-left-radius: var(--product-box-radius, .25rem);
     border-top-right-radius: var(--product-box-radius, .25rem);

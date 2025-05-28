@@ -6,10 +6,14 @@ import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 import {faSeedling} from "@fortawesome/free-solid-svg-icons";
 import AnimatedBox from "../../components/AnimatedBox.tsx";
 import {NavLink} from "react-router-dom";
+import {Helmet} from "react-helmet-async";
 
 const Home: FC = () => {
     return (
         <section className={"page home-page"}>
+            <Helmet>
+                <link rel="canonical" href="https://nutipita.co.uk/" />
+            </Helmet>
             {/*hero section*/}
             <article className={"home-hero full-width"}>
                 <div className={"_wrapper home-section"}>
@@ -21,7 +25,8 @@ const Home: FC = () => {
                     </div>
                     <p>
                         Established in 2025 by Tamas and Gabriella, a married couple with over 30 years of baking
-                        experience, Nuti Pita is a family-run artisan bakery in London that specializes in premium, authentic,
+                        experience, Nuti Pita is a family-run artisan bakery in London that specializes in premium,
+                        authentic,
                         handmade pita
                         bread.
                     </p>
