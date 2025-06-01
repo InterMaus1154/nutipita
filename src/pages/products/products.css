@@ -45,8 +45,8 @@
     border-top-left-radius: var(--product-box-radius, .25rem);
     border-top-right-radius: var(--product-box-radius, .25rem);
 
-    animation: fade-in 1.2s 1 forwards;
-    opacity: 0;
+    /*animation: fade-in 1.2s 1 forwards;*/
+    /*opacity: 0;*/
 }
 
 @keyframes fade-in {
