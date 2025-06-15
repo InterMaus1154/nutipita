@@ -9,7 +9,7 @@ const Footer: FC = () => {
         <footer className={"full-width"}>
             <div className="_wrapper">
                 <span className={"copy"}>
-                    Nuti Pita &copy;: Fresh, Handmade, Authentic Pita Bread in London - from {new Date().getFullYear()}
+                    Nuti Pita &copy;: Fresh, Handmade, Authentic Pita Bread Supplier in London - from {new Date().getFullYear()}
                 </span>
                 <a href={"https://maps.app.goo.gl/nFHW525ojXRzFnqL6"} target={"_blank"} title={"Open map in new page"}>
                     Unit 13, Langhedge Industrial Estate, N18 2TQ, London
