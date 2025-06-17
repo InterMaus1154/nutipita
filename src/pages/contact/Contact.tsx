@@ -48,11 +48,11 @@ const Contact: FC = () => {
                         <a href="https://wa.me/447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
-                        <a target={"_blank"} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79" className={"icon-wrapper"}
+                        <a target={"_blank"} href="https://maps.app.goo.gl/nFHW525ojXRzFnqL6" className={"icon-wrapper"}
                            aria-label={"Location of our bakery"}>
                             <img src="icon/mapicon.png" alt="Bakery location" aria-hidden={true}/>
                         </a>
-                        <a target={"_blank"} href="https://maps.app.goo.gl/dHEy2pm6o8jzjoc79"
+                        <a target={"_blank"} href="https://maps.app.goo.gl/nFHW525ojXRzFnqL6"
                            className={"contact-info"}>
                             Unit 13,Langhedge IE,N182TQ
                         </a>

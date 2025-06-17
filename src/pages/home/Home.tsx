@@ -31,12 +31,12 @@ const Home: FC = () => {
                     <div className={"title-block"}>
                         <h2 className={"section-title"}>Welcome to Nuti Pita!</h2>
                         <h3 className={"subtitle"}>
-                            A Family Tradition of Quality In London.
+                            A Family Run Handmade Pita Bread Supplier in London.
                         </h3>
                     </div>
                     <p>
                         Established in 2025 by Tamas and Gabriella, a married couple with over 30 years of baking
-                        experience, Nuti Pita is a family-run artisan bakery in London that specializes in premium,
+                        experience, Nuti Pita is a family-run artisan bakery in London that specializes in supplying premium,
                         authentic,
                         handmade pita
                         bread.
@@ -53,7 +53,7 @@ const Home: FC = () => {
                         every piece of pita bread is crafted with care and attention to detail.
                     </AnimatedBox>
                     <AnimatedBox className={"paragraph"}>
-                        From small supermarkets to large restaurant chains, we supply a wide range of businesses
+                        Individuals, small supermarkets and large restaurant chains - we supply a wide range of customers
                         with
                         our freshly baked products. Our hands-on approach allows us to maintain the highest
                         standards,
@@ -92,7 +92,7 @@ const Home: FC = () => {
                                 Wide Reach
                             </div>
                             <p className="box-content">
-                                We proudly supply everything from small local supermarkets to large restaurant chains,
+                                We proudly supply everything from individuals, small local supermarkets and large restaurant chains,
                                 always maintaining the highest quality standards.
                             </p>
                         </AnimatedBox>
