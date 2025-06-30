@@ -32,6 +32,23 @@
     }
   },
   {
+    "title": "Brown Pita Bread",
+    "subtitle": "Weight: 100g",
+    "ingredients": [
+      "wheat flour",
+      "flour",
+      "water",
+      "salt",
+      "yeast"
+    ],
+    "packaging": {
+      "pieces": 5
+    },
+    "image": {
+      "folder": "brown_normal"
+    }
+  },
+  {
     "title": "White Pita Bread (mini)",
     "subtitle": "Weight: 40g",
     "ingredients": [
