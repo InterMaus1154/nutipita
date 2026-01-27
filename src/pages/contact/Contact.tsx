@@ -34,11 +34,11 @@ const Contact: FC = () => {
                         <a href="tel:+447754226325" className="contact-info">+447754226325</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
-                        <a href={"mailto:nutipita@gmail.com"} className="icon-wrapper email-icon"
-                           aria-label={"Email address: nutipita@gmail.com"}>
+                        <a href={"mailto:sales@nutipita.co.uk"} className="icon-wrapper email-icon"
+                           aria-label={"Email address: sales@nutipita.co.uk"}>
                             <img src={"icon/email.png"} alt={"Email icon"} aria-hidden={true}/>
                         </a>
-                        <a className={"contact-info"} href="mailto:nutipita@gmail.com">nutipita@gmail.com</a>
+                        <a className={"contact-info"} href="mailto:sales@nutipita.co.uk">sales@nutipita.co.uk</a>
                     </AnimatedBox>
                     <AnimatedBox className="contact-box">
                         <a href={"https://wa.me/447754226325"} className="icon-wrapper"
